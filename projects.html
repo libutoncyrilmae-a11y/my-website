@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
   <style>
-    body {
-      font-family: 'Lato', sans-serif;
-      background: #FDFCF5;
+    :root {
+      --bg-cream: #fdfcf5;
+      --primary-red: #9e4244;
+      --text-dark: #2c2c2c;
+      --border-line: #000;
+    }
+
+    /* RESET */
+    * {
       margin: 0;
-      padding: 40px;
-      color: #2c2c2c;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
+    /* BODY */
+    body {
+      font-family: "Lato", sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      border-top: 20px solid var(--primary-red);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-    }
-
-    .project {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-left: 6px solid #9E4244;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
-
-    .project h3 {
-      margin: 0 0 10px;
-    }
-
-    .project a {
-      text-decoration: none;
-      color: #9E4244;
-      font-weight: 600;
-    }
-
-    .project a:hover {
-      text-decoration: underline;
+    /* HEADER / NAV */
+    header {
+      padding: 2rem 5%;
     }
 
     nav {
@@ -52,33 +55,99 @@
       justify-content: center;
       gap: 4rem;
       padding-bottom: 15px;
-      border-bottom: 2px solid #000;
+      border-bottom: 2px solid var(--border-line);
       margin-bottom: 30px;
     }
 
     nav a {
       text-decoration: none;
-      font-family: 'Playfair Display', serif;
+      font-family: "Playfair Display", serif;
       font-size: 1.2rem;
-      color: #2c2c2c;
+      color: var(--text-dark);
     }
 
     nav a:hover {
-      color: #9E4244;
+      color: var(--primary-red);
+    }
+
+    /* MAIN CONTENT CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding-bottom: 4rem; /* so footer isn't too close */
+      flex-grow: 1;
+    }
+
+    /* PAGE TITLE */
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+
+    /* PROJECT CARDS */
+    .project {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--primary-red);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      color: var(--text-dark);
+      font-family: "Lato", sans-serif;
+    }
+
+    .project h3 {
+      margin: 0 0 10px 0;
+      font-weight: 700;
+    }
+
+    .project a {
+      text-decoration: none;
+      color: var(--primary-red);
+      font-weight: 600;
+      font-family: "Lato", sans-serif;
+      font-size: 1rem;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #dcdcd5;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      color: var(--text-dark);
+      font-size: 1.4rem;
     }
   </style>
 </head>
 
 <body>
-
-  <nav>
+  <header>
+    <nav>
       <a href="index.html">Home</a>
       <a href="#">About me</a>
       <a href="projects.html">Projects</a>
       <a href="#">Contacts</a>
-  </nav>
+    </nav>
+  </header>
 
-  <div class="container">
+  <main class="container">
     <h1>My Projects</h1>
 
     <div class="project">
@@ -95,7 +164,18 @@
       <h3>Blog 3: Career & Future Goals</h3>
       <a href="blog3.html">View Project →</a>
     </div>
-  </div>
+  </main>
 
+  <footer>
+    <div class="social-links">
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+    <p>&copy; Cyril Libuton</p>
+  </footer>
 </body>
 </html>
+
+
