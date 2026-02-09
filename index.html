@@ -1,267 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cy – Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cy - Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style>
-    /* ---------- RESET ---------- */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <!-- Embedded CSS -->
+    <style>
+        :root {
+            --bg-cream: #FDFCF5;
+            --primary-red: #9E4244;
+            --text-dark: #2c2c2c;
+            --border-line: #000;
+        }
 
-    body {
-      font-family: 'Lato', Arial, sans-serif;
-      background: #FDFCF5;
-      color: #2c2c2c;
-    }
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        /* BODY */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            border-top: 20px solid var(--primary-red);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-    /* ---------- HEADER ---------- */
-    header {
-      background: #9E4244;
-      padding: 20px 40px;
-    }
+        /* HEADER / NAV */
+        header {
+            padding: 2rem 5%;
+        }
 
-    nav {
-      display: flex;
-      justify-content: flex-end;
-      gap: 30px;
-    }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border-line);
+        }
 
-    nav a {
-      color: white;
-      font-size: 15px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+        nav a {
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        nav a:hover {
+            color: var(--primary-red);
+        }
 
-    /* ---------- HERO ---------- */
-    .hero {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 60px;
-    }
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 10%;
+            align-items: center;
+            position: relative;
+            flex-grow: 1;
+        }
 
-    .hero-text {
-      max-width: 500px;
-    }
+        /* HERO TEXT */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 400;
+        }
 
-    .hero-text h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            margin: 1rem 0 2.5rem;
+            color: #555;
+        }
 
-    .subtitle {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 30px;
-    }
+        .button {
+            display: inline-block;
+            background-color: #B2B09B;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .button {
-      display: inline-block;
-      padding: 12px 28px;
-      background: #9E4244;
-      color: white;
-      font-size: 14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-radius: 4px;
-    }
+        .button:hover {
+            background-color: #9c9a87;
+        }
 
-    .button:hover {
-      background: #7e3436;
-    }
+        /* HERO IMAGE */
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
 
-    /* ---------- HERO IMAGE ---------- */
-    .hero-image-container {
-      position: relative;
-      width: 300px;
-    }
+        .red-block {
+            position: absolute;
+            top: 15%;
+            right: -20%;
+            width: 120%;
+            height: 65%;
+            background-color: var(--primary-red);
+        }
 
-    .red-block {
-      position: absolute;
-      top: -20px;
-      left: -20px;
-      width: 100%;
-      height: 100%;
-      background: #9E4244;
-      z-index: 0;
-    }
+        .profile-img {
+            max-width: 380px;
+            width: 100%;
+            border: 8px solid #fff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
 
-    .profile-img {
-      position: relative;
-      width: 100%;
-      display: block;
-      z-index: 1;
-    }
+        /* FOOTER */
+        footer {
+            background-color: #DCDCD5;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
 
-    /* ---------- CONTENT BOX ---------- */
-    .content-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 100px;
-    }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    .content-box {
-      background: white;
-      max-width: 900px;
-      width: 100%;
-      padding: 70px 80px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .title {
-      font-family: 'Playfair Display', serif;
-      font-size: 38px;
-      margin-bottom: 16px;
-    }
-
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .divider {
-      border-top: 2px solid #740A03;
-      margin-bottom: 30px;
-    }
-
-    .title2 {
-      font-size: 20px;
-      font-weight: 600;
-      margin: 40px 0 12px;
-    }
-
-    .bio {
-      font-size: 15px;
-      line-height: 1.7;
-      text-align: justify;
-    }
-
-    b {
-      background-color: #f4cccc;
-      color: #740A03;
-      padding: 2px 4px;
-      border-radius: 3px;
-      font-weight: 600;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: #9E4244;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .social-links {
-      margin-bottom: 15px;
-    }
-
-    .social-links a {
-      color: white;
-      margin: 0 10px;
-      font-size: 18px;
-    }
-
-    .social-links a:hover {
-      opacity: 0.8;
-    }
-  </style>
+        .social-links a {
+            color: var(--text-dark);
+            font-size: 1.4rem;
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About Me</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About me</a>
+            <a href="#">Projects</a>
+            <a href="#">Contacts</a>
+        </nav>
+    </header>
 
-  <!-- HERO -->
-  <main class="hero">
-    <div class="hero-text">
-      <h1>Hi, I’m Cy!</h1>
-      <p class="subtitle">Welcome to my portfolio.</p>
-      <a href="#" class="button">Learn More</a>
-    </div>
+    <main class="hero">
+        <div class="hero-text">
+            <h1>Hi, I’m Cy!</h1>
+            <p class="subtitle">welcome . . .</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
 
-    <div class="hero-image-container">
-      <div class="red-block"></div>
-      <img
-        src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*kST_sr4ZH3Y279LI"
-        alt="Portrait of Cy"
-        class="profile-img"
-      />
-    </div>
-  </main>
+        <div class="hero-image-container">
+            <div class="red-block"></div>
+            <img
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*kST_sr4ZH3Y279LI"
+                alt="Portrait of Cy"
+                class="profile-img"
+            >
+        </div>
+    </main>
 
-  <!-- CONTENT -->
-  <section class="content-wrapper">
-    <div class="content-box">
-      <h2 class="title">About Me</h2>
-
-      <div class="meta">
-        <span>Cyril Libuton</span>
-        <span>Portfolio</span>
-      </div>
-
-      <div class="divider"></div>
-
-      <h3 class="title2">Who I Am</h3>
-      <p class="bio">
-        I’m a creative individual passionate about design, technology, and storytelling.
-        I enjoy building clean, thoughtful interfaces and continuously learning new tools.
-        My goal is to create work that feels both <b>functional</b> and <b>human</b>.
-      </p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="social-links">
-      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#"><i class="fa-brands fa-github"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-    <p>&copy; Cyril Libuton</p>
-  </footer>
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <p>&copy; Cyril Libuton</p>
+    </footer>
 
 </body>
 </html>
+
+</html>
+
 
 
