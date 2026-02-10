@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cy - Portfolio</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -56,7 +59,7 @@
         nav a:hover {
             color: var(--primary-red);
         }
-        
+
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -107,6 +110,78 @@
             width: 120%;
             height: 65%;
             background-color: var(--primary-red);
+        }
+
+        .profile-img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+            border: 8px solid #fff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #DCDCD5;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-dark);
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="#">Contacts</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-text">
+            <h1>Hi, I’m Cy!</h1>
+            <p class="subtitle">welcome . . .</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+
+        <div class="hero-image-container">
+            <div class="red-block"></div>
+            <img
+                src="bio.jpeg"
+                alt="Portrait of Cy"
+                class="profile-img"
+            >
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <p>&copy; Cyril Libuton</p>
+    </footer>
+
+</body>
+</html>
         }
 
         .profile-img {
@@ -179,6 +254,7 @@
 </html>
 
 </html>
+
 
 
 
