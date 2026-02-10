@@ -25,8 +25,58 @@
       text-align: center;
       color: #740A03;
       letter-spacing: 1px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
       text-transform: uppercase;
+    }
+
+    .photo-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .photo-box {
+      background: #eee;
+      border: 2px dashed #9e4244;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #740A03;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .photo-rect {
+      width: 420px;
+      height: 260px;
+    }
+
+    .photo-square {
+      width: 260px;
+      height: 260px;
+    }
+
+    @media (max-width: 768px) {
+      .page {
+        padding: 30px 25px;
+      }
+
+      .photo-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .photo-rect,
+      .photo-square {
+        width: 100%;
+        max-width: 100%;
+      }
     }
 
     .section {
@@ -58,12 +108,6 @@
       margin-left: 2px;
     }
 
-    @media (max-width: 768px) {
-      .page {
-        padding: 30px 25px;
-      }
-    }
-
     .home-btn {
       display: inline-block;
       text-decoration: none;
@@ -74,15 +118,30 @@
       letter-spacing: 1px;
       padding: 10px 18px;
       border-radius: 6px;
-      margin-bottom: 25px;
+      margin-top: 10px;
       font-weight: 600;
+    }
+
+    .home-btn:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
+
 <body>
 
   <div class="page">
     <h1>Going Through What I Went Through</h1>
+
+    <div class="photo-row">
+      <div class="photo-box photo-rect">
+        PIC 1 (RECTANGULAR)
+      </div>
+
+      <div class="photo-box photo-square">
+        PIC 2 (SQUARE)
+      </div>
+    </div>
 
     <div class="section">
       <div class="section-title">Childhood Years</div>
@@ -151,11 +210,11 @@
         While I respect my past and what shaped me, I also look forward to what's next with excitement.<sup>14</sup>
         The journey continues, and I'm ready to face whatever comes with an open heart and mind.<sup>15</sup>
       </p>
+
       <a href="index.html" class="home-btn">HOME</a>
     </div>
+
   </div>
 
 </body>
 </html>
-
-
