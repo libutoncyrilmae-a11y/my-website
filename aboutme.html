@@ -1,39 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AboutMe</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
+    :root {
+      --bg-cream: #FDFCF5;
+      --primary-red: #9E4244;
+      --text-dark: #2c2c2c;
+      --border-line: #000;
+      --muted-text: #666;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
-    body {
+    * {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background-color: #f2f2f2;
-      color: black;
-      text-align: justify;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      border-top: 20px solid var(--primary-red);
+      min-height: 100vh;
+    }
+
+    /* ✅ Fixed header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--bg-cream);
+      padding: 1.5rem 5%;
+      z-index: 999;
+      border-bottom: 2px solid var(--border-line);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-red);
     }
 
     .page {
+      padding-top: 120px;
       max-width: 900px;
-      margin: 40px auto;
-      background-color: #fdfcf5;
-      padding: 40px 50px;
+      margin: 0 auto 40px auto;
+      background-color: var(--bg-cream);
+      padding: 120px 50px 40px 50px; /* extra top padding for header */
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
       text-align: center;
-      color: #740A03;
+      color: var(--primary-red);
       letter-spacing: 1px;
       margin-bottom: 20px;
       text-transform: uppercase;
+      font-family: 'Playfair Display', serif;
     }
 
-    /* BUTTON NAVIGATION */
     .nav-buttons {
       text-align: center;
       margin-bottom: 40px;
@@ -43,14 +96,15 @@
       display: inline-block;
       margin: 6px;
       padding: 10px 18px;
-      background-color: #9e4244;
+      background-color: var(--primary-red);
       color: white;
       text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Lato', sans-serif;
       font-size: 14px;
       letter-spacing: 1px;
       border-radius: 6px;
       font-weight: 600;
+      transition: 0.3s ease;
     }
 
     .nav-buttons a:hover {
@@ -62,15 +116,16 @@
     }
 
     .section-title {
-      color: #9e4244;
+      color: var(--primary-red);
       font-weight: bold;
       margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
     }
 
     .divider {
       height: 2px;
       width: 100%;
-      background-color: #9e4244;
+      background-color: var(--primary-red);
       margin-bottom: 16px;
     }
 
@@ -82,22 +137,23 @@
 
     sup {
       font-size: 0.7em;
-      color: #9e4244;
+      color: var(--primary-red);
       margin-left: 2px;
     }
 
     .home-btn {
       display: inline-block;
       text-decoration: none;
-      background: #740A03;
+      background: var(--primary-red);
       color: white;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Lato', sans-serif;
       font-size: 14px;
       letter-spacing: 1px;
       padding: 10px 18px;
       border-radius: 6px;
       margin-top: 10px;
       font-weight: 600;
+      transition: 0.3s ease;
     }
 
     .home-btn:hover {
@@ -105,7 +161,7 @@
     }
 
     .content-with-photos img {
-      border: 2px solid #9e4244;
+      border: 2px solid var(--primary-red);
       border-radius: 10px;
       object-fit: cover;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -130,9 +186,33 @@
       clear: both;
     }
 
+    footer {
+      background-color: #DCDCD5;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-links a {
+      color: var(--text-dark);
+      font-size: 1.4rem;
+      transition: 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--primary-red);
+    }
+
     @media (max-width: 768px) {
       .page {
-        padding: 30px 25px;
+        padding: 130px 25px 30px 25px;
       }
 
       .img-rect,
@@ -149,6 +229,17 @@
 
 <body>
 
+  <!-- HEADER -->
+  <header>
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="#childhood">Childhood</a>
+          <a href="#teenage">Teenage</a>
+          <a href="#college">College</a>
+          <a href="#contacts">Contacts</a>
+      </nav>
+  </header>
+
   <div class="page">
     <h1>Going Through What I Went Through</h1>
 
@@ -162,13 +253,10 @@
     <div class="section" id="childhood">
       <div class="section-title">Childhood Years</div>
       <div class="divider"></div>
-
       <div class="content-with-photos">
         <a href="pic1.jpeg" target="images">
           <img src="pic1.jpeg" alt="Photo 1" class="img-rect">  
         </a>
-        
-
         <p>
           If you had told me at 13 where I would be today, I might have found it hard to believe.<sup>1</sup>
           Growing up, life was often confusing and didn't look like the usual story I imagined.<sup>2</sup>
@@ -180,12 +268,9 @@
           My grandmother taught me early how to be independent, which wasn't always easy because sometimes I felt like I had no one to fully rely on.<sup>8</sup>
           But that independence became a strong part of me.<sup>9</sup>
         </p>
-
         <a href="pic2.jpeg" target="images">
           <img src="pic2.jpeg" alt="Photo 2" class="img-square">
         </a>
-        
-
         <p>
           Over time, I started to understand why my life had been like this, and even though it wasn't simple, it taught me important lessons about staying strong.<sup>10</sup>
           I learned that staying positive, even when things look different or hard, really helps.<sup>11</sup>
@@ -194,7 +279,6 @@
           Life's challenges and my unusual family made me who I am today.<sup>14</sup>
           I'm thankful for the strength and hope those times gave me, and I carry those feelings as I face each new day with optimism.<sup>15</sup>
         </p>
-
         <div class="clear"></div>
       </div>
     </div>
@@ -245,13 +329,20 @@
         The journey continues, and I'm ready to face whatever comes with an open heart and mind.<sup>15</sup>
       </p>
 
-      <a href="index.html" class="home-btn">HOME</a>
+      <a href="#top" class="home-btn">HOME</a>
     </div>
 
   </div>
 
+  <footer id="contacts">
+      <div class="social-links">
+          <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+      <p>&copy; Cyril Libuton</p>
+  </footer>
+
 </body>
 </html>
-
-
-
