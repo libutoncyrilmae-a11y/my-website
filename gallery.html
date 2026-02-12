@@ -98,42 +98,31 @@ h2 {
     margin-bottom:3rem;
     padding:2rem 0;
     border-bottom: 2px solid var(--border-line);
-    display:flex;
-    gap: 2rem;
-    position: relative;
 }
 
-.collection-side {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+.collection-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.collection-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-red);
-    position: sticky;
-    top: 150px;
-    align-self: flex-start;
-}
-
-.back-to-top {
-    position: sticky;
-    top: 1rem;
-    align-self: flex-start;
-    font-weight: bold;
 }
 
 .back-to-top a {
     text-decoration: none;
     color: var(--primary-red);
-    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .back-to-top a:hover {
     text-decoration: underline;
-}
-
-.gallery-content {
-    flex:1;
 }
 
 .gallery-row {
@@ -184,27 +173,8 @@ h2 {
 }
 
 @media(max-width:800px){
-    .gallery-collection {
-        flex-direction: column;
-    }
-
-    .collection-side {
-        writing-mode: horizontal-tb;
-        margin-bottom: 1rem;
-    }
-
     .gallery-row {
         flex-direction: column;
-    }
-
-    .figure-rect,
-    .figure-square {
-        aspect-ratio:4/3;
-    }
-
-    .back-to-top {
-        align-self: flex-start;
-        margin-bottom: 1rem;
     }
 }
 
@@ -255,10 +225,12 @@ footer {
     <a href="#lover">My Lover</a>
 </div>
 
+<!-- Friends -->
 <div id="friends" class="gallery-collection">
-<div class="collection-side">Friends</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-<div class="gallery-content">
+<div class="collection-header">
+    <div class="collection-title">Friends</div>
+    <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+</div>
 <div class="gallery-row">
     <figure class="figure-rect">
         <a href="friend1.jpeg" target="imageTab"><img src="friend1.jpeg" alt="My Bestfriend Zea"></a>
@@ -288,12 +260,13 @@ footer {
     </figure>
 </div>
 </div>
-</div>
 
+<!-- Family -->
 <div id="family" class="gallery-collection">
-<div class="collection-side">Family</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-<div class="gallery-content">
+<div class="collection-header">
+    <div class="collection-title">Family</div>
+    <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+</div>
 <div class="gallery-row">
     <figure class="figure-rect">
         <a href="family1.jpeg" target="imageTab"><img src="family1.jpeg" alt="Family 1"></a>
@@ -323,12 +296,13 @@ footer {
     </figure>
 </div>
 </div>
-</div>
 
+<!-- Hobby -->
 <div id="hobby" class="gallery-collection">
-<div class="collection-side">My Hobby</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-<div class="gallery-content">
+<div class="collection-header">
+    <div class="collection-title">My Hobby</div>
+    <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+</div>
 <div class="gallery-row">
     <figure class="figure-rect">
         <a href="hobby1.jpeg" target="imageTab"><img src="hobby1.jpeg" alt="Hobby 1"></a>
@@ -358,12 +332,13 @@ footer {
     </figure>
 </div>
 </div>
-</div>
 
+<!-- Lover -->
 <div id="lover" class="gallery-collection">
-<div class="collection-side">My Lover</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-<div class="gallery-content">
+<div class="collection-header">
+    <div class="collection-title">My Lover</div>
+    <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+</div>
 <div class="gallery-row">
     <figure class="figure-rect">
         <a href="lover1.jpeg" target="imageTab"><img src="lover1.jpeg" alt="Lover 1"></a>
@@ -391,7 +366,6 @@ footer {
         <a href="lover6.jpeg" target="imageTab"><img src="lover6.jpeg" alt="Lover 6"></a>
         <figcaption>cafe date</figcaption>
     </figure>
-</div>
 </div>
 </div>
 
