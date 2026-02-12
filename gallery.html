@@ -62,8 +62,8 @@ h2 {
     text-align:center;
 }
 
-/* Gallery */
 
+/* Gallery */
 .gallery-collection {
     margin-bottom:3rem;
     padding-bottom:2rem;
@@ -89,6 +89,7 @@ h2 {
     border-radius:10px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.08);
     overflow:hidden;
+    position: relative;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -111,25 +112,27 @@ h2 {
     width:100%;
     height:100%;
     object-fit:cover;
+    display:block;
 }
 
 .gallery-row figcaption {
-    padding:10px;
-    font-size:0.9rem;
-    color:var(--muted-text);
-    text-align:center;
-    background:white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-@media(max-width: 800px){
-    .gallery-row { flex-direction: column; }
-
-    .figure-rect,
-    .figure-square {
-        flex:1;
-        aspect-ratio: 4 / 3;
-    }
+.gallery-row figure:hover figcaption {
+    opacity: 1;
 }
+
 
 footer {
     background-color: #DCDCD5;
@@ -188,56 +191,10 @@ footer {
 </div>
 </div>
 
-<!-- Family -->
-<div class="gallery-collection">
-<h3 class="collection-title">Family</h3>
 
-<div class="gallery-row">
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Family+1"><figcaption>Reunion</figcaption></figure>
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Family+2"><figcaption>Christmas</figcaption></figure>
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Family+3"><figcaption>Birthday</figcaption></figure>
-</div>
 
-<div class="gallery-row">
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Family+4"><figcaption>Picnic</figcaption></figure>
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Family+5"><figcaption>Graduation</figcaption></figure>
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Family+6"><figcaption>BBQ</figcaption></figure>
-</div>
-</div>
 
-<!-- Crocheting -->
-<div class="gallery-collection">
-<h3 class="collection-title">Crocheting</h3>
 
-<div class="gallery-row">
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Crochet+1"><figcaption>Blanket</figcaption></figure>
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Crochet+2"><figcaption>Scarf</figcaption></figure>
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Crochet+3"><figcaption>Amigurumi</figcaption></figure>
-</div>
-
-<div class="gallery-row">
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Crochet+4"><figcaption>Gifts</figcaption></figure>
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Crochet+5"><figcaption>Work in Progress</figcaption></figure>
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Crochet+6"><figcaption>Colorful</figcaption></figure>
-</div>
-</div>
-
-<!-- My Love -->
-<div class="gallery-collection">
-<h3 class="collection-title">My Love</h3>
-
-<div class="gallery-row">
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Lover+1"><figcaption>Anniversary</figcaption></figure>
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Lover+2"><figcaption>Beach</figcaption></figure>
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Lover+3"><figcaption>Movie Night</figcaption></figure>
-</div>
-
-<div class="gallery-row">
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Lover+4"><figcaption>Picnic</figcaption></figure>
-    <figure class="figure-rect"><img src="https://via.placeholder.com/400x200?text=Lover+5"><figcaption>Celebration</figcaption></figure>
-    <figure class="figure-square"><img src="https://via.placeholder.com/200?text=Lover+6"><figcaption>Night Out</figcaption></figure>
-</div>
-</div>
 
 </div>
 </section>
@@ -254,3 +211,4 @@ footer {
 
 </body>
 </html>
+
