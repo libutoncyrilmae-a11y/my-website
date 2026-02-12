@@ -82,6 +82,30 @@ h2 {
     font-family: 'Playfair Display', serif;
     font-size:1.8rem;
     margin:2rem 0 1.5rem;
+    text-align:center;
+}
+
+.collection-nav {
+    text-align: center;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.collection-nav a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    transition: background-color 0.3s;
+}
+
+.collection-nav a:hover {
+    background-color: #7a2f30;
 }
 
 .gallery-row {
@@ -128,6 +152,22 @@ h2 {
 
 .gallery-row figure:hover figcaption {
     opacity:1;
+}
+
+.back-to-top {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--primary-red);
+    font-weight: bold;
+}
+
+.back-to-top a:hover {
+    text-decoration: underline;
 }
 
 @media(max-width:800px){
@@ -181,8 +221,14 @@ footer {
 <div class="section-content">
 <h2>My Gallery</h2>
 
-<!-- Friends -->
-<div class="gallery-collection">
+<div class="collection-nav">
+    <a href="#friends">Friends</a>
+    <a href="#family">Family</a>
+    <a href="#hobby">My Hobby</a>
+    <a href="#lover">My Lover</a>
+</div>
+
+<div id="friends" class="gallery-collection">
 <h3 class="collection-title">Friends</h3>
 <div class="gallery-row">
     <figure class="figure-rect">
@@ -224,10 +270,10 @@ footer {
         <figcaption>Childhood friends</figcaption>
     </figure>
 </div>
+<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- Family -->
-<div class="gallery-collection">
+<div id="family" class="gallery-collection">
 <h3 class="collection-title">Family</h3>
 <div class="gallery-row">
     <figure class="figure-rect">
@@ -269,10 +315,10 @@ footer {
         <figcaption>My mom and her lover</figcaption>
     </figure>
 </div>
+<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- Hobby -->
-<div class="gallery-collection">
+<div id="hobby" class="gallery-collection">
 <h3 class="collection-title">My Hobby</h3>
 <div class="gallery-row">
     <figure class="figure-rect">
@@ -314,10 +360,10 @@ footer {
         <figcaption>Jul 2025</figcaption>
     </figure>
 </div>
+<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- Lover -->
-<div class="gallery-collection">
+<div id="lover" class="gallery-collection">
 <h3 class="collection-title">My Lover</h3>
 <div class="gallery-row">
     <figure class="figure-rect">
@@ -359,11 +405,8 @@ footer {
         <figcaption>cafe date</figcaption>
     </figure>
 </div>
+<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
-
-</div>
-</section>
-
 
 </div>
 </section>
@@ -380,7 +423,3 @@ footer {
 
 </body>
 </html>
-
-
-
-
