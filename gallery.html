@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cy's Gallery</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+    --bg-cream: #FDFCF5;
+    --primary-red: #9E4244;
+    --text-dark: #2c2c2c;
+    --border-line: #000;
+    --muted-text: #666;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    border-top: 20px solid var(--primary-red);
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top:0; left:0; width:100%;
+    background-color: var(--bg-cream);
+    padding: 1.5rem 5%;
+    z-index:999;
+    border-bottom: 2px solid var(--border-line);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+nav { display:flex; justify-content:center; gap:4rem; }
+nav a {
+    text-decoration:none;
+    font-family: 'Playfair Display', serif;
+    font-size:1.2rem;
+    color: var(--text-dark);
+    transition: 0.3s ease;
+}
+nav a:hover { color: var(--primary-red); }
+
+.section { padding: 6rem 5%; }
+.section-content { max-width: 1200px; margin:auto; }
+
+h2 { font-family: 'Playfair Display', serif; font-size:2.8rem; margin-bottom:2rem; text-align:center; }
+
+.text-link { color: var(--text-dark); text-decoration: underline; font-weight: 600; transition: 0.3s ease;}
+.text-link:hover { color: var(--primary-red); }
+
+.back-to-top {
+    display:inline-block; margin-top:2rem;
+    font-family: 'Playfair Display', serif; font-size:0.95rem;
+    text-decoration:none; color:var(--text-dark);
+    border-bottom:1px solid var(--text-dark);
+    transition:0.3s ease;
+}
+.back-to-top:hover { color: var(--primary-red); border-color: var(--primary-red); }
+
+footer {
+    background-color: #DCDCD5;
+    padding: 2rem 0;
+    text-align:center;
+    margin-top: 4rem;
+}
+.social-links { display:flex; justify-content:center; gap:1.5rem; margin-bottom:1rem; }
+.social-links a { color: var(--text-dark); font-size:1.4rem; transition:0.3s ease; }
+.social-links a:hover { color: var(--primary-red); }
+
+/* Justified gallery styles */
+.gallery-collection { margin-bottom:3rem; padding-bottom:2rem; border-bottom: 2px solid var(--border-line); }
+.collection-title { font-family: 'Playfair Display', serif; font-size:1.8rem; margin:2rem 0 1rem; }
+
+.gallery-row {
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+.gallery-row figure {
+    margin:0; background:white;
+    border-left:4px solid var(--primary-red);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    overflow:hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gallery-row figure:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+.gallery-row img {
+    width:100%; display:block; object-fit:cover;
+}
+.gallery-row figcaption {
+    padding:8px 12px;
+    font-size:0.95rem;
+    color:var(--muted-text);
+    text-align:center;
+}
+
+/* Placeholder sizes */
+.figure-rect { flex:2; height:200px; }
+.figure-square { flex:1; height:200px; }
+
+@media(max-width: 800px){
+    .gallery-row { flex-direction: column; }
+    .figure-rect, .figure-square { flex:1; height:200px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">Biography</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#top">Contacts</a>
+</nav>
+</header>
+
+<section class="section">
+<div class="section-content">
+<h2>My Gallery</h2>
+
+<!-- Friends Collection -->
+<div class="gallery-collection">
+<h3 class="collection-title">Friends</h3>
+<div class="gallery-row">
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Friends+1" alt="Friends 1"></a><figcaption>Park Day</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Friends+2" alt="Friends 2"></a><figcaption>Birthday</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Friends+3" alt="Friends 3"></a><figcaption>Beach Trip</figcaption></figure>
+</div>
+<div class="gallery-row">
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Friends+4" alt="Friends 4"></a><figcaption>Movie Night</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Friends+5" alt="Friends 5"></a><figcaption>Road Trip</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Friends+6" alt="Friends 6"></a><figcaption>Cafe Hangout</figcaption></figure>
+</div>
+</div>
+
+<!-- Family Collection -->
+<div class="gallery-collection">
+<h3 class="collection-title">Family</h3>
+<div class="gallery-row">
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Family+1" alt="Family 1"></a><figcaption>Reunion</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Family+2" alt="Family 2"></a><figcaption>Christmas</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Family+3" alt="Family 3"></a><figcaption>Birthday</figcaption></figure>
+</div>
+<div class="gallery-row">
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Family+4" alt="Family 4"></a><figcaption>Picnic</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Family+5" alt="Family 5"></a><figcaption>Graduation</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Family+6" alt="Family 6"></a><figcaption>BBQ</figcaption></figure>
+</div>
+</div>
+
+<!-- Hobby Collection -->
+<div class="gallery-collection">
+<h3 class="collection-title">Crocheting</h3>
+<div class="gallery-row">
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Crochet+1" alt="Crochet 1"></a><figcaption>Blanket</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Crochet+2" alt="Crochet 2"></a><figcaption>Scarf</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Crochet+3" alt="Crochet 3"></a><figcaption>Amigurumi</figcaption></figure>
+</div>
+<div class="gallery-row">
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Crochet+4" alt="Crochet 4"></a><figcaption>Gifts</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Crochet+5" alt="Crochet 5"></a><figcaption>Work in Progress</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Crochet+6" alt="Crochet 6"></a><figcaption>Colorful</figcaption></figure>
+</div>
+</div>
+
+<!-- Lover Collection -->
+<div class="gallery-collection">
+<h3 class="collection-title">My Love</h3>
+<div class="gallery-row">
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Lover+1" alt="Lover 1"></a><figcaption>Anniversary</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Lover+2" alt="Lover 2"></a><figcaption>Beach</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Lover+3" alt="Lover 3"></a><figcaption>Movie Night</figcaption></figure>
+</div>
+<div class="gallery-row">
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Lover+4" alt="Lover 4"></a><figcaption>Picnic</figcaption></figure>
+    <figure class="figure-rect"><a href="#"><img src="https://via.placeholder.com/400x200?text=Lover+5" alt="Lover 5"></a><figcaption>Celebration</figcaption></figure>
+    <figure class="figure-square"><a href="#"><img src="https://via.placeholder.com/200?text=Lover+6" alt="Lover 6"></a><figcaption>Night Out</figcaption></figure>
+</div>
+</div>
+
+<a href="#top" class="back-to-top">Back to Top</a>
+</div>
+</section>
+
+<footer>
+<div class="social-links">
+    <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+    <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+</div>
+<p>&copy; Cyril Libuton</p>
+</footer>
+</body>
+</html>
