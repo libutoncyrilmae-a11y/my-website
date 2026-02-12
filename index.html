@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -140,7 +139,8 @@
         }
 
         .section-content {
-            max-width: 750px;
+            max-width: 900px;
+            margin: auto;
         }
 
         .section h2 {
@@ -164,6 +164,40 @@
 
         .text-link:hover {
             color: var(--primary-red);
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            border-left: 6px solid var(--primary-red);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .project h3 {
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .project a {
+            color: var(--primary-red);
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
         }
 
         .back-to-top {
@@ -222,77 +256,100 @@
             header {
                 padding: 1rem 5%;
             }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="#top">Home</a>
-            <a href="aboutme.html">Biography</a>
-            <a href="projects.html">Projects</a>
-            <a href="#contacts">Contacts</a>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="#top">Home</a>
+        <a href="#about">Biography</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contacts</a>
+    </nav>
+</header>
 
-    <main class="hero">
-        <div class="hero-text">
-            <h1>Hi, I’m Cy!</h1>
-            <p class="subtitle">welcome . . .</p>
-            <a href="#about" class="button">About Me</a>
+<main class="hero">
+    <div class="hero-text">
+        <h1>Hi, I’m Cy!</h1>
+        <p class="subtitle">welcome . . .</p>
+        <a href="#about" class="button">About Me</a>
+    </div>
+
+    <div class="hero-image-container">
+        <div class="red-block"></div>
+        <img src="bio.jpeg" alt="Portrait of Cy" class="profile-img">
+    </div>
+</main>
+
+<section id="about" class="section">
+    <div class="section-content">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm Cy, a 2nd year Computer Science student with a strong passion for coding
+            and continuous learning. I genuinely enjoy building things through code and
+            exploring new technologies.
+        </p>
+        <p>
+            I consider myself an eager and adaptive person. I love taking on new challenges,
+            learning from experiences, and continuously improving my skills every step of the way.
+        </p>
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="section-content">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>Blog 1: A Doomscrolling Confession</h3>
+                <a href="blog1.html">View Project →</a>
+            </div>
+            <div class="project">
+                <h3>Blog 2: Non-Tech Personal Voice</h3>
+                <a href="blog2.html">View Project →</a>
+            </div>
+            <div class="project">
+                <h3>Blog 3: Career & Future Goals</h3>
+                <a href="blog3.html">View Project →</a>
+            </div>
         </div>
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+</section>
 
-        <div class="hero-image-container">
-            <div class="red-block"></div>
-            <img src="bio.jpeg" alt="Portrait of Cy" class="profile-img">
-        </div>
-    </main>
+<section id="contacts" class="section">
+    <div class="section-content">
+        <h2>Contacts</h2>
+        <p>
+            Email: 123cyrilmae@gmail.com <br>
+            Phone: 09184793447 <br>
+            Facebook:
+            <a href="https://web.facebook.com/cycy.1123" class="text-link">
+                Cyril Libuton
+            </a>
+        </p>
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+</section>
 
-    <section id="about" class="section">
-        <div class="section-content">
-            <h2>About Me</h2>
-            <p>
-                Hi! I'm Cy, a 2nd year Computer Science student with a strong passion for coding
-                and continuous learning. I genuinely enjoy building things through code and
-                exploring new technologies.
-            </p>
-            <p>
-                I consider myself an eager and adaptive person. I love taking on new challenges,
-                learning from experiences, and continuously improving my skills every step of the way.
-            </p>
-
-            <a href="#top" class="back-to-top">Back to Top</a>
-        </div>
-    </section>
-
-    <section id="contacts" class="section">
-        <div class="section-content">
-            <h2>Contacts</h2>
-            <p>
-                Email: 123cyrilmae@gmail.com <br>
-                Phone: 09184793447 <br>
-                Facebook:
-                <a href="https://web.facebook.com/cycy.1123" class="text-link">
-                    Cyril Libuton
-                </a>
-            </p>
-
-            <a href="#top" class="back-to-top">Back to Top</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-        </div>
-        <p>&copy; Cyril Libuton</p>
-    </footer>
+<footer>
+    <div class="social-links">
+        <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+    <p>&copy; Cyril Libuton</p>
+</footer>
 
 </body>
 </html>
-
