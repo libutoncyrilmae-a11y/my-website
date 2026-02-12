@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects</title>
+  <title>Projects | Cy Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,10 +23,14 @@
       --primary-red: #9e4244;
       --text-dark: #2c2c2c;
       --border-line: #000;
+      --muted-text: #666;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
 
-    {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -37,22 +41,26 @@
       background-color: var(--bg-cream);
       color: var(--text-dark);
       border-top: 20px solid var(--primary-red);
-      display: flex;
-      flex-direction: column;
       min-height: 100vh;
     }
 
+    /* Fixed Header */
     header {
-      padding: 2rem 5%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--bg-cream);
+      padding: 1.5rem 5%;
+      z-index: 999;
+      border-bottom: 2px solid var(--border-line);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 
     nav {
       display: flex;
       justify-content: center;
       gap: 4rem;
-      padding-bottom: 15px;
-      border-bottom: 2px solid var(--border-line);
-      margin-bottom: 30px;
     }
 
     nav a {
@@ -60,48 +68,57 @@
       font-family: "Playfair Display", serif;
       font-size: 1.2rem;
       color: var(--text-dark);
+      transition: 0.3s ease;
     }
 
     nav a:hover {
       color: var(--primary-red);
     }
 
-    .container {
+    /* Spacing for fixed header */
+    main {
+      padding-top: 100px;
       max-width: 900px;
       margin: auto;
-      padding-bottom: 4rem; /* so footer isn't too close */
       flex-grow: 1;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 40px;
       font-family: "Playfair Display", serif;
       font-weight: 600;
       font-size: 3rem;
+      margin-bottom: 50px;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 30px;
     }
 
     .project {
       background: white;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 25px;
       border-left: 6px solid var(--primary-red);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-      color: var(--text-dark);
-      font-family: "Lato", sans-serif;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
     }
 
     .project h3 {
-      margin: 0 0 10px 0;
       font-weight: 700;
+      margin-bottom: 12px;
     }
 
     .project a {
-      text-decoration: none;
       color: var(--primary-red);
       font-weight: 600;
-      font-family: "Lato", sans-serif;
-      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s ease;
     }
 
     .project a:hover {
@@ -112,7 +129,7 @@
       background-color: #dcdcd5;
       padding: 2rem 0;
       text-align: center;
-      margin-top: auto;
+      margin-top: 4rem;
     }
 
     .social-links {
@@ -125,6 +142,25 @@
     .social-links a {
       color: var(--text-dark);
       font-size: 1.4rem;
+      transition: 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--primary-red);
+    }
+
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 1rem 5%;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
     }
   </style>
 </head>
@@ -132,47 +168,41 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="aboutme.html">About me</a>
+      <a href="#top">Home</a>
+      <a href="aboutme.html">Biography</a>
       <a href="projects.html">Projects</a>
-      <a href="#">Contacts</a>
+      <a href="#contacts">Contacts</a>
     </nav>
   </header>
 
-  <main class="container">
+  <main>
     <h1>My Projects</h1>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Blog 1: A Doomscrolling Confession</h3>
+        <a href="blog1.html">View Project →</a>
+      </div>
 
-    <div class="project">
-      <h3>Blog 1: A Doomscrolling Confession</h3>
-      <a href="blog1.html">View Project →</a>
-    </div>
+      <div class="project">
+        <h3>Blog 2: Non-Tech Personal Voice</h3>
+        <a href="blog2.html">View Project →</a>
+      </div>
 
-    <div class="project">
-      <h3>Blog 2: Non-Tech Personal Voice</h3>
-      <a href="blog2.html">View Project →</a>
-    </div>
-
-    <div class="project">
-      <h3>Blog 3: Career & Future Goals</h3>
-      <a href="blog3.html">View Project →</a>
+      <div class="project">
+        <h3>Blog 3: Career & Future Goals</h3>
+        <a href="blog3.html">View Project →</a>
+      </div>
     </div>
   </main>
 
-  <footer>
+  <footer id="contacts">
     <div class="social-links">
-      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://mailto:123cyrilmae@gmail.com/"><i class="fa-regular fa-envelope"></i></a>
+      <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
     </div>
     <p>&copy; Cyril Libuton</p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
