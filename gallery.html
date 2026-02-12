@@ -39,21 +39,31 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-nav { display:flex; justify-content:center; gap:4rem; }
+nav {
+    display:flex;
+    justify-content:center;
+    gap:4rem;
+}
 
 nav a {
     text-decoration:none;
     font-family: 'Playfair Display', serif;
     font-size:1.2rem;
     color: var(--text-dark);
-    transition: 0.3s ease;
 }
 
-nav a:hover { color: var(--primary-red); }
+nav a:hover {
+    color: var(--primary-red);
+}
 
-.section { padding: 8rem 5% 6rem; }
+.section {
+    padding: 8rem 5% 6rem;
+}
 
-.section-content { max-width: 1200px; margin:auto; }
+.section-content {
+    max-width: 1200px;
+    margin:auto;
+}
 
 h2 {
     font-family: 'Playfair Display', serif;
@@ -62,8 +72,6 @@ h2 {
     text-align:center;
 }
 
-
-/* Gallery */
 .gallery-collection {
     margin-bottom:3rem;
     padding-bottom:2rem;
@@ -80,22 +88,14 @@ h2 {
     display:flex;
     gap:20px;
     margin-bottom:20px;
-    align-items: stretch;
 }
 
 .gallery-row figure {
     margin:0;
-    background:white;
     border-radius:10px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
     overflow:hidden;
     position: relative;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.gallery-row figure:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 26px rgba(0,0,0,0.12);
+    flex:1;
 }
 
 .figure-rect {
@@ -116,29 +116,37 @@ h2 {
 }
 
 .gallery-row figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 0.9rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:10px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    text-align:center;
+    opacity:0;
+    transition:0.3s;
 }
 
 .gallery-row figure:hover figcaption {
-    opacity: 1;
+    opacity:1;
 }
 
+@media(max-width:800px){
+    .gallery-row {
+        flex-direction:column;
+    }
+
+    .figure-rect,
+    .figure-square {
+        aspect-ratio:4/3;
+    }
+}
 
 footer {
-    background-color: #DCDCD5;
-    padding: 2rem 0;
+    background-color:#DCDCD5;
+    padding:2rem 0;
     text-align:center;
-    margin-top: 4rem;
+    margin-top:4rem;
 }
 
 .social-links {
@@ -149,13 +157,13 @@ footer {
 }
 
 .social-links a {
-    color: var(--text-dark);
+    color:var(--text-dark);
     font-size:1.4rem;
-    transition:0.3s ease;
 }
 
-.social-links a:hover { color: var(--primary-red); }
-
+.social-links a:hover {
+    color:var(--primary-red);
+}
 </style>
 </head>
 
@@ -174,28 +182,56 @@ footer {
 <div class="section-content">
 <h2>My Gallery</h2>
 
-<!-- Friends -->
 <div class="gallery-collection">
 <h3 class="collection-title">Friends</h3>
 
-<div class="gallery-row">
-    <figure class="figure-rect"><img src="friend1.jpeg"><figcaption>My Bestfriend Zea</figcaption></figure>
-    <figure class="figure-square"><img src="friend2.jpeg"><figcaption>My Bestfriend Trayce</figcaption></figure>
-    <figure class="figure-rect"><img src="friend3.jpeg"><figcaption>Double Date w/ Zea</figcaption></figure>
+<div class="gallery-row"> <!--- FRIEND --->
+    <figure class="figure-rect">
+        <a href="friend1.jpeg" target="_blank">
+            <img src="friend1.jpeg" alt="My Bestfriend Zea">
+        </a>
+        <figcaption>My Bestfriend Zea</figcaption>
+    </figure>
+
+    <figure class="figure-square">
+        <a href="friend2.jpeg" target="_blank">
+            <img src="friend2.jpeg" alt="My Bestfriend Trayce">
+        </a>
+        <figcaption>My Bestfriend Trayce</figcaption>
+    </figure>
+
+    <figure class="figure-rect">
+        <a href="friend3.jpeg" target="_blank">
+            <img src="friend3.jpeg" alt="Double Date">
+        </a>
+        <figcaption>Double Date w/ Zea</figcaption>
+    </figure>
 </div>
 
 <div class="gallery-row">
-    <figure class="figure-square"><img src="friend4.jpeg"><figcaption>Lunch w/ Zea</figcaption></figure>
-    <figure class="figure-rect"><img src="friend5.jpeg"><figcaption>UE friends</figcaption></figure>
-    <figure class="figure-square"><img src="friend6.jpeg"><figcaption>Childhood friends</figcaption></figure>
+    <figure class="figure-square">
+        <a href="friend4.jpeg" target="_blank">
+            <img src="friend4.jpeg" alt="Lunch">
+        </a>
+        <figcaption>Lunch w/ Zea</figcaption>
+    </figure>
+
+    <figure class="figure-rect">
+        <a href="friend5.jpeg" target="_blank">
+            <img src="friend5.jpeg" alt="UE friends">
+        </a>
+        <figcaption>UE friends</figcaption>
+    </figure>
+
+    <figure class="figure-square">
+        <a href="friend6.jpeg" target="_blank">
+            <img src="friend6.jpeg" alt="Childhood friends">
+        </a>
+        <figcaption>Childhood friends</figcaption>
+    </figure>
+</div> <!--- FRIEND --->
+
 </div>
-</div>
-
-
-
-
-
-
 </div>
 </section>
 
@@ -211,4 +247,3 @@ footer {
 
 </body>
 </html>
-
