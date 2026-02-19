@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -33,7 +32,6 @@ body {
     border-top: 20px solid var(--primary-red);
 }
 
-/* HEADER */
 header {
     position: fixed;
     top: 0;
@@ -61,7 +59,6 @@ nav a:hover {
     color: var(--primary-red);
 }
 
-/* MAIN SECTION */
 .section {
     padding: 10rem 8% 5rem;
     max-width: 1200px;
@@ -73,10 +70,17 @@ nav a:hover {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     color: var(--primary-red);
-    margin-bottom: 4rem;
+    margin-bottom: 0.5rem;
 }
 
-/* SPLIT LAYOUT */
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    color: var(--muted-text);
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
 .split-container {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -89,7 +93,6 @@ nav a:hover {
     grid-template-columns: 1.3fr 1fr;
 }
 
-/* Description Card */
 .desc-card {
     background: #fff;
     border: 2px solid var(--border-line);
@@ -98,6 +101,15 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.desc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .desc-card h2 {
@@ -115,6 +127,7 @@ nav a:hover {
     font-size: 0.85rem;
     margin-bottom: 1.5rem;
     color: var(--primary-red);
+    white-space: nowrap;
 }
 
 .desc-card p {
@@ -130,7 +143,18 @@ nav a:hover {
     text-align: justify;
 }
 
-/* Trailer Container */
+.back-to-top {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    color: var(--primary-red);
+}
+
+.back-to-top:hover {
+    color: #000;
+}
+
 .trailer-container {
     border: 2px solid var(--border-line);
     border-radius: 20px;
@@ -145,7 +169,13 @@ nav a:hover {
     border: none;
 }
 
-/* FOOTER */
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: var(--border-line);
+    margin: 3rem auto 2rem;
+}
+
 footer {
     background-color: #DCDCD5;
     padding: 2rem 0;
@@ -173,7 +203,6 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* MOBILE */
 @media(max-width: 900px) {
     .split-container, .split-container.reverse {
         grid-template-columns: 1fr;
@@ -196,25 +225,24 @@ footer p {
 <header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="mybeats.html">Beats</a>
         <a href="gallery.html">Gallery</a>
+        <a href="mybeats.html">Beats</a>
         <a href="myfilm.html">Movies</a>
         <a href="myfilmtv.html">TV Shows</a>
     </nav>
 </header>
 
 <section class="section">
-
     <h1 class="page-title">My Film TV Shows</h1>
+    <p class="subtitle">My favorite series</p>
 
     <div class="split-container">
-        <div class="desc-card">
-            <div>
-                <h2>Modern Family</h2>
-                <div class="category">Sitcom / Comedy</div>
-                <p>A mockumentary-style sitcom following three related families and their everyday lives. I love coming back to this series whenever I need a good laugh, it feels like a cozy, funny hug for my evenings.</p>
-            </div>
+        <div class="desc-card" onclick="window.location.href='https://en.wikipedia.org/wiki/Modern_Family';">
+            <h2>Modern Family</h2>
+            <div class="category">Sitcom / Comedy</div>
+            <p>A mockumentary-style sitcom following three related families and their everyday lives. I love coming back to this series whenever I need a good laugh, it feels like a cozy, funny hug for my evenings.</p>
             <p class="creator">Created by Christopher Lloyd & Steven Levitan</p>
+            <a href="#top" class="back-to-top">Back to Top</a>
         </div>
         <div class="trailer-container">
             <iframe src="https://www.youtube.com/embed/rbpTUPisA78" allowfullscreen></iframe>
@@ -225,24 +253,22 @@ footer p {
         <div class="trailer-container">
             <iframe src="https://www.youtube.com/embed/oZn3qSgmLqI" allowfullscreen></iframe>
         </div>
-        <div class="desc-card">
-            <div>
-                <h2>The Queen's Gambit</h2>
-                <div class="category">Drama / Miniseries</div>
-                <p>A miniseries about a young chess prodigy rising through the ranks. This show always inspires me when I feel stuck, Beth’s journey is thrilling and smart, she inspired me to play chess.</p>
-            </div>
+        <div class="desc-card" onclick="window.location.href='#';">
+            <h2>The Queen's Gambit</h2>
+            <div class="category">Drama / Miniseries</div>
+            <p>A miniseries about a young chess prodigy rising through the ranks. This show always inspires me when I feel stuck, Beth’s journey is thrilling and smart, she inspired me to play chess.</p>
             <p class="creator">Created by Scott Frank</p>
+            <a href="#top" class="back-to-top">Back to Top</a>
         </div>
     </div>
 
     <div class="split-container">
-        <div class="desc-card">
-            <div>
-                <h2>Kim's Convenience</h2>
-                <div class="category">Sitcom / Comedy</div>
-                <p>A sitcom about a Korean-Canadian family running a convenience store. Watching this series feels like visiting a warm, funny family I wish I had nearby, it is perfectly cozy and heartwarming.</p>
-            </div>
+        <div class="desc-card" onclick="window.location.href='https://en.wikipedia.org/wiki/Kim%27s_Convenience';">
+            <h2>Kim's Convenience</h2>
+            <div class="category">Sitcom / Comedy</div>
+            <p>A sitcom about a Korean-Canadian family running a convenience store. Watching this series feels like visiting a warm, funny family I wish I had nearby, it is perfectly cozy and heartwarming.</p>
             <p class="creator">Created by Ins Choi & Kevin White</p>
+            <a href="#top" class="back-to-top">Back to Top</a>
         </div>
         <div class="trailer-container">
             <iframe src="https://www.youtube.com/embed/HIBbB6giJ7c" allowfullscreen></iframe>
@@ -253,24 +279,22 @@ footer p {
         <div class="trailer-container">
             <iframe src="https://www.youtube.com/embed/8yyzNQfaQR8" allowfullscreen></iframe>
         </div>
-        <div class="desc-card">
-            <div>
-                <h2>3%</h2>
-                <div class="category">Sci-Fi / Thriller</div>
-                <p>A dystopian sci-fi series where candidates compete for a chance at a better life. This series is perfect for those who seek thrill and mystery, this serie helped me through the pandemic.</p>
-            </div>
+        <div class="desc-card" onclick="window.location.href='https://en.wikipedia.org/wiki/3%25';">
+            <h2>3%</h2>
+            <div class="category">Sci-Fi / Thriller</div>
+            <p>A dystopian sci-fi series where candidates compete for a chance at a better life. This series is perfect for those who seek thrill and mystery, this serie helped me through the pandemic.</p>
             <p class="creator">Created by Pedro Aguilera</p>
+            <a href="#top" class="back-to-top">Back to Top</a>
         </div>
     </div>
 
     <div class="split-container">
-        <div class="desc-card">
-            <div>
-                <h2>The 100</h2>
-                <div class="category">Sci-Fi / Drama</div>
-                <p>A post-apocalyptic sci-fi series following 100 juvenile delinquents sent back to Earth. Though the serie is so long, it never gets boring, it gets interesting every episode.</p>
-            </div>
+        <div class="desc-card" onclick="window.location.href='https://en.wikipedia.org/wiki/The_100_(TV_series)';">
+            <h2>The 100</h2>
+            <div class="category">Sci-Fi / Drama</div>
+            <p>A post-apocalyptic sci-fi series following 100 juvenile delinquents sent back to Earth. Though the serie is so long, it never gets boring, it gets interesting every episode.</p>
             <p class="creator">Created by Jason Rothenberg</p>
+            <a href="#top" class="back-to-top">Back to Top</a>
         </div>
         <div class="trailer-container">
             <iframe src="https://www.youtube.com/embed/aDrsItJ_HU4" allowfullscreen></iframe>
@@ -281,17 +305,17 @@ footer p {
         <div class="trailer-container">
             <iframe src="https://www.youtube.com/embed/BwYBw1raC2o" allowfullscreen></iframe>
         </div>
-        <div class="desc-card">
-            <div>
-                <h2>Dead to Me</h2>
-                <div class="category">Comedy / Drama</div>
-                <p>Darkly comedic tale of grief, friendship, and secrets. This serie is both funny and twisted, it almost reminds me of the movie Gone Girl.</p>
-            </div>
+        <div class="desc-card" onclick="window.location.href='https://en.wikipedia.org/wiki/Dead_to_Me_(TV_series)';">
+            <h2>Dead to Me</h2>
+            <div class="category">Comedy / Drama</div>
+            <p>Darkly comedic tale of grief, friendship, and secrets. This serie is both funny and twisted, it almost reminds me of the movie Gone Girl.</p>
             <p class="creator">Created by Liz Feldman</p>
+            <a href="#top" class="back-to-top">Back to Top</a>
         </div>
     </div>
-
 </section>
+
+<div class="divider"></div>
 
 <footer>
     <div class="social-links">
