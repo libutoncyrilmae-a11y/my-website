@@ -105,10 +105,10 @@
             margin-bottom: 3rem;
         }
 
-        /* ===== GRID MOVIE LAYOUT ===== */
+        /* ===== IMPROVED GRID LAYOUT (NO EMPTY SPACE) ===== */
         .movie-card {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 260px 1fr;
             grid-template-areas:
                 "info info"
                 "poster trailer";
@@ -148,25 +148,21 @@
         .movie-poster {
             grid-area: poster;
             width: 100%;
-            max-width: 250px;
-            aspect-ratio: 5 / 7;
+            height: 100%;
             object-fit: cover;
             border-radius: 8px;
         }
 
         .trailer {
             grid-area: trailer;
-            position: relative;
             width: 100%;
-            padding-top: 56.25%;
+            height: 100%;
+            min-height: 360px;
             border-radius: 8px;
             overflow: hidden;
         }
 
         .trailer iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             border: 0;
@@ -212,7 +208,11 @@
             }
 
             .movie-poster {
-                margin: 0 auto;
+                max-height: 400px;
+            }
+
+            .trailer {
+                min-height: 250px;
             }
 
             .section {
