@@ -102,17 +102,17 @@
             display: flex;
             flex-direction: column;
             gap: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
 
-        /* ===== IMPROVED GRID LAYOUT (NO EMPTY SPACE) ===== */
+        /* ===== MOVIE CARD LAYOUT ===== */
         .movie-card {
             display: grid;
             grid-template-columns: 260px 1fr;
+            grid-template-rows: auto 1fr;
             grid-template-areas:
                 "info info"
-                "poster trailer"
-                "backtop backtop";
+                "poster trailer";
             gap: 1.5rem;
             background: #fff;
             padding: 1.5rem;
@@ -169,27 +169,21 @@
             border: 0;
         }
 
-        /* Back to Top Button */
-        .back-to-top {
-            grid-area: backtop;
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .back-to-top a {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--primary-red);
-            border-radius: 6px;
-            color: var(--primary-red);
+        /* ===== Back to Top outside cards ===== */
+        .back-to-top-outside {
+            margin-top: 1.5rem;
+            text-align: left; /* align left */
             font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
         }
 
-        .back-to-top a:hover {
-            background-color: var(--primary-red);
-            color: #fff;
+        .back-to-top-outside a {
+            color: var(--primary-red);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-top-outside a:hover {
+            color: #ff0000; /* red hover effect */
         }
 
         footer {
@@ -224,11 +218,11 @@
         @media(max-width: 900px) {
             .movie-card {
                 grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
                 grid-template-areas:
                     "info"
                     "poster"
-                    "trailer"
-                    "backtop";
+                    "trailer";
                 text-align: center;
             }
 
@@ -242,6 +236,10 @@
 
             .section {
                 padding: 8rem 5% 4rem;
+            }
+
+            .back-to-top-outside {
+                text-align: left;
             }
         }
     </style>
@@ -278,9 +276,6 @@
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" allowfullscreen></iframe>
                 </div>
-                <div class="back-to-top">
-                    <a href="#top">Back to Top</a>
-                </div>
             </a>
 
             <!-- The Karate Kid -->
@@ -294,9 +289,6 @@
                 <img src="images/films/thekaratekid.jpg" alt="The Karate Kid Poster" class="movie-poster">
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/XY8amUImEu0" allowfullscreen></iframe>
-                </div>
-                <div class="back-to-top">
-                    <a href="#top">Back to Top</a>
                 </div>
             </a>
 
@@ -312,9 +304,6 @@
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/m9bOpeuvNwY" allowfullscreen></iframe>
                 </div>
-                <div class="back-to-top">
-                    <a href="#top">Back to Top</a>
-                </div>
             </a>
 
             <!-- Now You See Me -->
@@ -328,9 +317,6 @@
                 <img src="images/films/nowyouseeme.jpg" alt="Now You See Me Poster" class="movie-poster">
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/C2NWGAqZhF4" allowfullscreen></iframe>
-                </div>
-                <div class="back-to-top">
-                    <a href="#top">Back to Top</a>
                 </div>
             </a>
 
@@ -346,11 +332,13 @@
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
                 </div>
-                <div class="back-to-top">
-                    <a href="#top">Back to Top</a>
-                </div>
             </a>
 
+        </div>
+
+        <!-- Back to Top Text -->
+        <div class="back-to-top-outside">
+            <a href="#top">Back to Top</a>
         </div>
 
         <div class="divider"></div>
