@@ -38,7 +38,6 @@ body {
 header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     background-color: var(--bg-cream);
     padding: 1.5rem 5%;
@@ -57,7 +56,6 @@ nav a {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     color: var(--text-dark);
-    transition: 0.3s ease;
 }
 
 nav a:hover {
@@ -82,13 +80,19 @@ h2 {
     color: var(--primary-red);
 }
 
-/* SQUARE IMAGE PLACEHOLDER */
-.feature-image {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto 4rem auto;
-    border: 3px solid var(--border-line);
+/* IMAGE COLLAGE */
+.image-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 4rem;
+}
+
+.square-img {
+    width: 100%;
+    aspect-ratio: 1/1;
     background-color: #eee;
+    border: 2px solid var(--border-line);
 }
 
 /* ARTIST BLOCK */
@@ -100,11 +104,8 @@ h2 {
     border-bottom: 2px solid var(--border-line);
 }
 
-.artist-info {
-    font-family: 'Playfair Display', serif;
-}
-
 .artist-title {
+    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     color: var(--primary-red);
     margin-bottom: 0.5rem;
@@ -120,23 +121,34 @@ h2 {
     list-style: none;
 }
 
-.song-list li {
+.song-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 1.5rem;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
 }
 
-.song-list a {
+.song-thumb {
+    width: 55px;
+    aspect-ratio: 1/1;
+    background-color: #eee;
+    border: 2px solid var(--border-line);
+    flex-shrink: 0;
+}
+
+.song-item a {
     text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
     color: var(--text-dark);
     transition: 0.3s ease;
 }
 
-.song-list a:hover {
+.song-item a:hover {
     color: var(--primary-red);
-    padding-left: 8px;
+    padding-left: 5px;
 }
 
 /* BACK TO TOP */
@@ -152,27 +164,14 @@ h2 {
     font-weight: 600;
 }
 
-.back-to-top a:hover {
-    text-decoration: underline;
-}
-
 /* RESPONSIVE */
 @media(max-width:768px){
     .artist-block {
         grid-template-columns: 1fr;
     }
 
-    .feature-image {
-        width: 220px;
-        height: 220px;
-    }
-
-    nav {
-        gap: 2rem;
-    }
-
-    h2 {
-        font-size: 2.3rem;
+    .image-collage {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 </style>
@@ -194,48 +193,82 @@ h2 {
 
 <h2>My Beats</h2>
 
-<!-- Square Image Placeholder -->
-<div class="feature-image"></div>
+<!-- Simple Image Grid -->
+<div class="image-collage">
+    <div class="square-img"></div>
+    <div class="square-img"></div>
+    <div class="square-img"></div>
+    <div class="square-img"></div>
+    <div class="square-img"></div>
+    <div class="square-img"></div>
+</div>
 
 <!-- Tame Impala -->
 <div class="artist-block">
-    <div class="artist-info">
+    <div>
         <div class="artist-title">Tame Impala</div>
         <div class="album-name">Album: Currents</div>
     </div>
 
     <ul class="song-list">
-        <li><a href="lyrics-less-i-know.html">The Less I Know The Better</a></li>
-        <li><a href="lyrics-eventually.html">Eventually</a></li>
-        <li><a href="lyrics-new-person.html">New Person, Same Old Mistakes</a></li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-less-i-know.html">The Less I Know The Better</a>
+        </li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-eventually.html">Eventually</a>
+        </li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-new-person.html">New Person, Same Old Mistakes</a>
+        </li>
     </ul>
 </div>
 
 <!-- Mitski -->
 <div class="artist-block">
-    <div class="artist-info">
+    <div>
         <div class="artist-title">Mitski</div>
         <div class="album-name">Album: Be the Cowboy</div>
     </div>
 
     <ul class="song-list">
-        <li><a href="lyrics-nobody.html">Nobody</a></li>
-        <li><a href="lyrics-me-and-my-husband.html">Me and My Husband</a></li>
-        <li><a href="lyrics-why-didnt-you-stop-me.html">Why Didn't You Stop Me</a></li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-nobody.html">Nobody</a>
+        </li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-me-and-my-husband.html">Me and My Husband</a>
+        </li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-why-didnt-you-stop-me.html">Why Didn't You Stop Me</a>
+        </li>
     </ul>
 </div>
 
 <!-- Arctic Monkeys -->
 <div class="artist-block">
-    <div class="artist-info">
+    <div>
         <div class="artist-title">Arctic Monkeys</div>
         <div class="album-name">Album: AM</div>
     </div>
 
     <ul class="song-list">
-        <li><a href="lyrics-knee-socks.html">Knee Socks</a></li>
-        <li><a href="lyrics-snap-out-of-it.html">Snap Out of It</a></li>
-        <li><a href="lyrics-i-want-it-all.html">I Want It All</a></li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-knee-socks.html">Knee Socks</a>
+        </li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-snap-out-of-it.html">Snap Out of It</a>
+        </li>
+        <li class="song-item">
+            <div class="song-thumb"></div>
+            <a href="lyrics-i-want-it-all.html">I Want It All</a>
+        </li>
     </ul>
 </div>
 
