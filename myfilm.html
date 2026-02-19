@@ -111,7 +111,8 @@
             grid-template-columns: 260px 1fr;
             grid-template-areas:
                 "info info"
-                "poster trailer";
+                "poster trailer"
+                "backtop backtop";
             gap: 1.5rem;
             background: #fff;
             padding: 1.5rem;
@@ -168,6 +169,29 @@
             border: 0;
         }
 
+        /* Back to Top Button */
+        .back-to-top {
+            grid-area: backtop;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .back-to-top a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-red);
+            border-radius: 6px;
+            color: var(--primary-red);
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top a:hover {
+            background-color: var(--primary-red);
+            color: #fff;
+        }
+
         footer {
             background-color: #DCDCD5;
             padding: 2rem 0;
@@ -203,7 +227,8 @@
                 grid-template-areas:
                     "info"
                     "poster"
-                    "trailer";
+                    "trailer"
+                    "backtop";
                 text-align: center;
             }
 
@@ -228,8 +253,9 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
-        <a href="movies.html">Movies</a>
-        <a href="tvshows.html">TV Shows</a>
+        <a href="mybeats.html">Beats</a>
+        <a href="myfilm.html">Movies</a>
+        <a href="myfilmtv.html">TV Shows</a>
     </nav>
 </header>
 
@@ -246,11 +272,14 @@
                     <h3>Interstellar</h3>
                     <p>Genre: Sci-Fi / Adventure</p>
                     <p>Year: 2014</p>
-                    <p>An epic exploration of space and time, with love and survival at its core.</p>
+                    <p>An epic exploration of space and time, with love and survival at its core. One of the best movies I've ever watched. If you enjoy movies that involves outer space and thrills, this movie is for you.</p>
                 </div>
                 <img src="images/films/interstellar.jpg" alt="Interstellar Poster" class="movie-poster">
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" allowfullscreen></iframe>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top">Back to Top</a>
                 </div>
             </a>
 
@@ -260,11 +289,14 @@
                     <h3>The Karate Kid</h3>
                     <p>Genre: Action / Drama</p>
                     <p>Year: 2010</p>
-                    <p>Jaden Smith learns martial arts to overcome challenges and find inner strength.</p>
+                    <p>Jaden Smith learns martial arts to overcome challenges and find inner strength. My childhood fave as well, I grew up watching this. It's very inspiring and motivational.</p>
                 </div>
                 <img src="images/films/thekaratekid.jpg" alt="The Karate Kid Poster" class="movie-poster">
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/XY8amUImEu0" allowfullscreen></iframe>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top">Back to Top</a>
                 </div>
             </a>
 
@@ -274,11 +306,14 @@
                     <h3>Coraline</h3>
                     <p>Genre: Fantasy / Animation</p>
                     <p>Year: 2009</p>
-                    <p>A young girl discovers a mysterious parallel world with dark secrets.</p>
+                    <p>A young girl discovers a mysterious parallel world with dark secrets. I grew up watching this and I still do up to this day, it's both fun and mysterious.</p>
                 </div>
                 <img src="images/films/coraline.jpg" alt="Coraline Poster" class="movie-poster">
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/m9bOpeuvNwY" allowfullscreen></iframe>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top">Back to Top</a>
                 </div>
             </a>
 
@@ -288,11 +323,14 @@
                     <h3>Now You See Me</h3>
                     <p>Genre: Mystery / Thriller</p>
                     <p>Year: 2013</p>
-                    <p>A team of magicians pulls off daring heists while staying ahead of the law.</p>
+                    <p>A team of magicians pulls off daring heists while staying ahead of the law. One of the best movies out there to watch with your family.</p>
                 </div>
                 <img src="images/films/nowyouseeme.jpg" alt="Now You See Me Poster" class="movie-poster">
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/C2NWGAqZhF4" allowfullscreen></iframe>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top">Back to Top</a>
                 </div>
             </a>
 
@@ -302,11 +340,14 @@
                     <h3>Oppenheimer</h3>
                     <p>Genre: Biography / Drama</p>
                     <p>Year: 2023</p>
-                    <p>The story of J. Robert Oppenheimer and the moral dilemmas he faced while developing the atomic bomb.</p>
+                    <p>The story of J. Robert Oppenheimer and the moral dilemmas he faced while developing the atomic bomb. A very educational and interesting movie.</p>
                 </div>
                 <img src="images/films/oppeneimer.jpg" alt="Oppenheimer Poster" class="movie-poster">
                 <div class="trailer">
                     <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top">Back to Top</a>
                 </div>
             </a>
 
