@@ -20,9 +20,7 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Lato', sans-serif;
@@ -55,18 +53,11 @@ nav a {
     color: var(--text-dark);
 }
 
-nav a:hover {
-    color: var(--primary-red);
-}
+nav a:hover { color: var(--primary-red); }
 
-.section {
-    padding: 8rem 5% 6rem;
-}
+.section { padding: 8rem 5% 6rem; }
 
-.section-content {
-    max-width: 1200px;
-    margin:auto;
-}
+.section-content { max-width: 1200px; margin:auto; }
 
 h2 {
     font-family: 'Playfair Display', serif;
@@ -95,9 +86,7 @@ h2 {
     transition: background-color 0.3s;
 }
 
-.collection-nav a:hover {
-    background-color: #7a2f30;
-}
+.collection-nav a:hover { background-color: #7a2f30; }
 
 .gallery-collection {
     margin-bottom:3rem;
@@ -120,9 +109,7 @@ h2 {
     color: var(--primary-red);
 }
 
-.back-to-top {
-    margin-top: 1rem;
-}
+.back-to-top { margin-top: 1rem; }
 
 .back-to-top a {
     text-decoration: none;
@@ -130,9 +117,7 @@ h2 {
     font-weight: bold;
 }
 
-.back-to-top a:hover {
-    text-decoration: underline;
-}
+.back-to-top a:hover { text-decoration: underline; }
 
 .gallery-row {
     display:flex;
@@ -148,15 +133,8 @@ h2 {
     position: relative;
 }
 
-.figure-rect {
-    flex:2;
-    aspect-ratio: 16 / 9;
-}
-
-.figure-square {
-    flex:1;
-    aspect-ratio: 1 / 1;
-}
+.figure-rect { flex:2; aspect-ratio: 16 / 9; }
+.figure-square { flex:1; aspect-ratio: 1 / 1; }
 
 .gallery-row img {
     width:100%;
@@ -177,14 +155,10 @@ h2 {
     transition:0.3s;
 }
 
-.gallery-row figure:hover figcaption {
-    opacity:1;
-}
+.gallery-row figure:hover figcaption { opacity:1; }
 
 @media(max-width:800px){
-    .gallery-row {
-        flex-direction: column;
-    }
+    .gallery-row { flex-direction: column; }
 }
 
 footer {
@@ -206,9 +180,7 @@ footer {
     font-size:1.4rem;
 }
 
-.social-links a:hover {
-    color:var(--primary-red);
-}
+.social-links a:hover { color:var(--primary-red); }
 </style>
 </head>
 
@@ -234,145 +206,133 @@ footer {
     <a href="#lover">My Lover</a>
 </div>
 
-<!-- Friends -->
 <div id="friends" class="gallery-collection">
-<div class="collection-header">
-    <div class="collection-title">Friends</div>
-</div>
+<div class="collection-header"><div class="collection-title">Friends</div></div>
 <div class="gallery-row">
     <figure class="figure-rect">
-        <a href="images/gallery/friend1.jpeg" target="imageTab"><img src="friend1.jpeg" alt="My Bestfriend Zea"></a>
+        <a href="images/gallery/friend1.jpeg" target="_blank"><img src="images/gallery/friend1.jpeg" alt="My Bestfriend Zea"></a>
         <figcaption>My Bestfriend Zea</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/friend2.jpeg" target="imageTab"><img src="friend2.jpeg" alt="My Bestfriend Trayce"></a>
+        <a href="images/gallery/friend2.jpeg" target="_blank"><img src="images/gallery/friend2.jpeg" alt="My Bestfriend Trayce"></a>
         <figcaption>My Bestfriend Trayce</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/friend3.jpeg" target="imageTab"><img src="friend3.jpeg" alt="Double Date w/ Zea"></a>
+        <a href="images/gallery/friend3.jpeg" target="_blank"><img src="images/gallery/friend3.jpeg" alt="Double Date w/ Zea"></a>
         <figcaption>Double Date w/ Zea</figcaption>
     </figure>
 </div>
 <div class="gallery-row">
     <figure class="figure-square">
-        <a href="images/gallery/friend4.jpeg" target="imageTab"><img src="friend4.jpeg" alt="Lunch w/ Zea"></a>
+        <a href="images/gallery/friend4.jpeg" target="_blank"><img src="images/gallery/friend4.jpeg" alt="Lunch w/ Zea"></a>
         <figcaption>Lunch w/ Zea</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/friend5.jpeg" target="imageTab"><img src="friend5.jpeg" alt="UE friends"></a>
+        <a href="images/gallery/friend5.jpeg" target="_blank"><img src="images/gallery/friend5.jpeg" alt="UE friends"></a>
         <figcaption>UE friends</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/friend6.jpeg" target="imageTab"><img src="friend6.jpeg" alt="Childhood friends"></a>
+        <a href="images/gallery/friend6.jpeg" target="_blank"><img src="images/gallery/friend6.jpeg" alt="Childhood friends"></a>
         <figcaption>Childhood friends</figcaption>
     </figure>
 </div>
 <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- Family -->
 <div id="family" class="gallery-collection">
-<div class="collection-header">
-    <div class="collection-title">Family</div>
-</div>
+<div class="collection-header"><div class="collection-title">Family</div></div>
 <div class="gallery-row">
     <figure class="figure-rect">
-        <a href="images/gallery/family1.jpeg" target="imageTab"><img src="family1.jpeg" alt="Family 1"></a>
+        <a href="images/gallery/family1.jpeg" target="_blank"><img src="images/gallery/family1.jpeg" alt="Family 1"></a>
         <figcaption>Father side</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/family2.jpeg" target="imageTab"><img src="family2.jpeg" alt="Family 2"></a>
+        <a href="images/gallery/family2.jpeg" target="_blank"><img src="images/gallery/family2.jpeg" alt="Family 2"></a>
         <figcaption>Me and my niece</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/family3.jpeg" target="imageTab"><img src="family3.jpeg" alt="Family 3"></a>
+        <a href="images/gallery/family3.jpeg" target="_blank"><img src="images/gallery/family3.jpeg" alt="Family 3"></a>
         <figcaption>Mother side</figcaption>
     </figure>
 </div>
 <div class="gallery-row">
     <figure class="figure-square">
-        <a href="images/gallery/family4.jpeg" target="imageTab"><img src="family4.jpeg" alt="Family 4"></a>
+        <a href="images/gallery/family4.jpeg" target="_blank"><img src="images/gallery/family4.jpeg" alt="Family 4"></a>
         <figcaption>w/ my mom</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/family5.jpeg" target="imageTab"><img src="family5.jpeg" alt="Family 5"></a>
+        <a href="images/gallery/family5.jpeg" target="_blank"><img src="images/gallery/family5.jpeg" alt="Family 5"></a>
         <figcaption>Father side</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/family6.jpeg" target="imageTab"><img src="family6.jpeg" alt="Family 6"></a>
+        <a href="images/gallery/family6.jpeg" target="_blank"><img src="images/gallery/family6.jpeg" alt="Family 6"></a>
         <figcaption>My mom and her lover</figcaption>
     </figure>
 </div>
 <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- Hobby -->
 <div id="hobby" class="gallery-collection">
-<div class="collection-header">
-    <div class="collection-title">My Hobby</div>
-</div>
+<div class="collection-header"><div class="collection-title">My Hobby</div></div>
 <div class="gallery-row">
     <figure class="figure-rect">
-        <a href="images/gallery/hobby1.jpeg" target="imageTab"><img src="hobby1.jpeg" alt="Hobby 1"></a>
+        <a href="images/gallery/hobby1.jpeg" target="_blank"><img src="images/gallery/hobby1.jpeg" alt="Hobby 1"></a>
         <figcaption>Feb 2026</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/hobby2.jpeg" target="imageTab"><img src="hobby2.jpeg" alt="Hobby 2"></a>
+        <a href="images/gallery/hobby2.jpeg" target="_blank"><img src="images/gallery/hobby2.jpeg" alt="Hobby 2"></a>
         <figcaption>Feb 2025</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/hobby3.jpeg" target="imageTab"><img src="hobby3.jpeg" alt="Hobby 3"></a>
+        <a href="images/gallery/hobby3.jpeg" target="_blank"><img src="images/gallery/hobby3.jpeg" alt="Hobby 3"></a>
         <figcaption>Feb 2025</figcaption>
     </figure>
 </div>
 <div class="gallery-row">
     <figure class="figure-square">
-        <a href="images/gallery/hobby4.jpeg" target="imageTab"><img src="hobby4.jpeg" alt="Hobby 4"></a>
+        <a href="images/gallery/hobby4.jpeg" target="_blank"><img src="images/gallery/hobby4.jpeg" alt="Hobby 4"></a>
         <figcaption>Mar 2025</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/hobby5.jpeg" target="imageTab"><img src="hobby5.jpeg" alt="Hobby 5"></a>
+        <a href="images/gallery/hobby5.jpeg" target="_blank"><img src="images/gallery/hobby5.jpeg" alt="Hobby 5"></a>
         <figcaption>Jun 2025</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/hobby6.jpeg" target="imageTab"><img src="hobby6.jpeg" alt="Hobby 6"></a>
+        <a href="images/gallery/hobby6.jpeg" target="_blank"><img src="images/gallery/hobby6.jpeg" alt="Hobby 6"></a>
         <figcaption>Jul 2025</figcaption>
     </figure>
 </div>
 <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- Lover -->
 <div id="lover" class="gallery-collection">
-<div class="collection-header">
-    <div class="collection-title">My Lover</div>
-</div>
+<div class="collection-header"><div class="collection-title">My Lover</div></div>
 <div class="gallery-row">
     <figure class="figure-rect">
-        <a href="images/gallery/lover1.jpeg" target="imageTab"><img src="lover1.jpeg" alt="Lover 1"></a>
-        <figcaption>antipolo date</figcaption>
+        <a href="images/gallery/lover1.jpeg" target="_blank"><img src="images/gallery/lover1.jpeg" alt="Lover 1"></a>
+        <figcaption>Antipolo date</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/lover2.jpeg" target="imageTab"><img src="lover2.jpeg" alt="Lover 2"></a>
-        <figcaption>photoboot date</figcaption>
+        <a href="images/gallery/lover2.jpeg" target="_blank"><img src="images/gallery/lover2.jpeg" alt="Lover 2"></a>
+        <figcaption>Photobooth date</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/lover3.jpeg" target="imageTab"><img src="lover3.jpeg" alt="Lover 3"></a>
-        <figcaption>antipolo date</figcaption>
+        <a href="images/gallery/lover3.jpeg" target="_blank"><img src="images/gallery/lover3.jpeg" alt="Lover 3"></a>
+        <figcaption>Antipolo date</figcaption>
     </figure>
 </div>
 <div class="gallery-row">
     <figure class="figure-square">
-        <a href="images/gallery/lover4.jpeg" target="imageTab"><img src="lover4.jpeg" alt="Lover 4"></a>
-        <figcaption>cinema date</figcaption>
+        <a href="images/gallery/lover4.jpeg" target="_blank"><img src="images/gallery/lover4.jpeg" alt="Lover 4"></a>
+        <figcaption>Cinema date</figcaption>
     </figure>
     <figure class="figure-rect">
-        <a href="images/gallery/lover5.jpeg" target="imageTab"><img src="lover5.jpeg" alt="Lover 5"></a>
-        <figcaption>photobooth date</figcaption>
+        <a href="images/gallery/lover5.jpeg" target="_blank"><img src="images/gallery/lover5.jpeg" alt="Lover 5"></a>
+        <figcaption>Photobooth date</figcaption>
     </figure>
     <figure class="figure-square">
-        <a href="images/gallery/lover6.jpeg" target="imageTab"><img src="lover6.jpeg" alt="Lover 6"></a>
-        <figcaption>cafe date</figcaption>
+        <a href="images/gallery/lover6.jpeg" target="_blank"><img src="images/gallery/lover6.jpeg" alt="Lover 6"></a>
+        <figcaption>Cafe date</figcaption>
     </figure>
 </div>
 <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
@@ -393,4 +353,3 @@ footer {
 
 </body>
 </html>
-
