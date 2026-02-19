@@ -76,12 +76,17 @@ nav a:hover {
     margin-bottom: 4rem;
 }
 
-/* SPLIT LAYOUT: Desc left, video right */
+/* SPLIT LAYOUT */
 .split-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.3fr;
     gap: 3rem;
-    align-items: stretch; /* ensures both containers are same height */
+    align-items: stretch;
+    margin-bottom: 5rem;
+}
+
+.split-container.reverse {
+    grid-template-columns: 1.3fr 1fr;
 }
 
 /* Description Card */
@@ -130,12 +135,12 @@ nav a:hover {
     border: 2px solid var(--border-line);
     border-radius: 20px;
     overflow: hidden;
-    height: 100%; /* matches description card */
+    height: 100%;
 }
 
 .trailer-container iframe {
     width: 100%;
-    height: 100%; /* fill container height */
+    height: 100%;
     display: block;
     border: none;
 }
@@ -170,13 +175,17 @@ footer p {
 
 /* MOBILE */
 @media(max-width: 900px) {
-    .split-container {
+    .split-container, .split-container.reverse {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
     .trailer-container {
         height: 250px;
+    }
+
+    .desc-card {
+        margin-bottom: 2rem;
     }
 }
 </style>
@@ -187,9 +196,10 @@ footer p {
 <header>
     <nav>
         <a href="index.html">Home</a>
+        <a href="mybeats.html">Beats</a>
         <a href="gallery.html">Gallery</a>
-        <a href="movies.html">Movies</a>
-        <a href="tvshows.html">TV Shows</a>
+        <a href="myfilm.html">Movies</a>
+        <a href="myfilmtv.html">TV Shows</a>
     </nav>
 </header>
 
@@ -198,28 +208,87 @@ footer p {
     <h1 class="page-title">My Film TV Shows</h1>
 
     <div class="split-container">
-
-        <!-- Description Card -->
         <div class="desc-card">
             <div>
                 <h2>Modern Family</h2>
                 <div class="category">Sitcom / Comedy</div>
-
-                <p>
-                    A lighthearted and hilarious mockumentary-style series following three related families as they navigate everyday life, parenting, and love. It’s one of my ultimate comfort series — perfect for rewatching when I need laughs and warmth.
-                </p>
+                <p>A mockumentary-style sitcom following three related families and their everyday lives. I love coming back to this series whenever I need a good laugh, it feels like a cozy, funny hug for my evenings.</p>
             </div>
-
-            <p class="creator">
-                Created by Christopher Lloyd & Steven Levitan
-            </p>
+            <p class="creator">Created by Christopher Lloyd & Steven Levitan</p>
         </div>
-
-        <!-- Trailer -->
         <div class="trailer-container">
-            <iframe src="https://www.youtube.com/embed/Ub_oQ7Kz3nQ" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/watch?v=rbpTUPisA78" allowfullscreen></iframe>
         </div>
+    </div>
 
+    <div class="split-container reverse">
+        <div class="trailer-container">
+            <iframe src="https://www.youtube.com/watch?v=oZn3qSgmLqI" allowfullscreen></iframe>
+        </div>
+        <div class="desc-card">
+            <div>
+                <h2>The Queen's Gambit</h2>
+                <div class="category">Drama / Miniseries</div>
+                <p>A miniseries about a young chess prodigy rising through the ranks. This show always inspires me when I feel stuck, Beth’s journey is thrilling and smart, she inspired me to play chess.</p>
+            </div>
+            <p class="creator">Created by Scott Frank</p>
+        </div>
+    </div>
+
+    <div class="split-container">
+        <div class="desc-card">
+            <div>
+                <h2>Kim's Convenience</h2>
+                <div class="category">Sitcom / Comedy</div>
+                <p>A sitcom about a Korean-Canadian family running a convenience store. Watching this series feels like visiting a warm, funny family I wish I had nearby, it is perfectly cozy and heartwarming.</p>
+            </div>
+            <p class="creator">Created by Ins Choi & Kevin White</p>
+        </div>
+        <div class="trailer-container">
+            <iframe src="https://www.youtube.com/watch?v=HIBbB6giJ7c" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="split-container reverse">
+        <div class="trailer-container">
+            <iframe src="https://www.youtube.com/watch?v=8yyzNQfaQR8" allowfullscreen></iframe>
+        </div>
+        <div class="desc-card">
+            <div>
+                <h2>3%</h2>
+                <div class="category">Sci-Fi / Thriller</div>
+                <p>A dystopian sci-fi series where candidates compete for a chance at a better life. This series is perfect for those who seek thrill and mystery, this serie helped me through the pandemic.</p>
+            </div>
+            <p class="creator">Created by Pedro Aguilera</p>
+        </div>
+    </div>
+
+    <div class="split-container">
+        <div class="desc-card">
+            <div>
+                <h2>The 100</h2>
+                <div class="category">Sci-Fi / Drama</div>
+                <p>A post-apocalyptic sci-fi series following 100 juvenile delinquents sent back to Earth. Though the serie is so long, it never gets boring, it gets interesting every episode.</p>
+            </div>
+            <p class="creator">Created by Jason Rothenberg</p>
+        </div>
+        <div class="trailer-container">
+            <iframe src="https://www.youtube.com/watch?v=aDrsItJ_HU4" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="split-container reverse">
+        <div class="trailer-container">
+            <iframe src="https://www.youtube.com/watch?v=BwYBw1raC2o" allowfullscreen></iframe>
+        </div>
+        <div class="desc-card">
+            <div>
+                <h2>Dead to Me</h2>
+                <div class="category">Comedy / Drama</div>
+                <p>Darkly comedic tale of grief, friendship, and secrets. This serie is both funny and twisted, it almost reminds me of the movie Gone Girl.</p>
+            </div>
+            <p class="creator">Created by Liz Feldman</p>
+        </div>
     </div>
 
 </section>
