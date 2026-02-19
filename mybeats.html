@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Beats</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-cream: #FDFCF5;
+    --primary-red: #9E4244;
+    --text-dark: #2c2c2c;
+    --border-line: #000;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    border-top: 20px solid var(--primary-red);
+    margin:0;
+}
+header {
+    padding: 1.5rem 5%;
+    border-bottom: 2px solid var(--border-line);
+    text-align:center;
+}
+nav a {
+    margin: 0 2rem;
+    text-decoration:none;
+    font-family:'Playfair Display', serif;
+    color:var(--text-dark);
+}
+nav a:hover { color: var(--primary-red); }
+
+.section {
+    padding: 5rem 10%;
+    border-top:2px solid var(--border-line);
+}
+.section h2 {
+    font-family:'Playfair Display', serif;
+    font-size:2.5rem;
+}
+.projects-grid {
+    display:grid;
+    gap:30px;
+}
+.project {
+    background:white;
+    padding:25px;
+    border-left:6px solid var(--primary-red);
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+.project img {
+    width:200px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="index.html">Home</a>
+<a href="mybeats.html">My Beats</a>
+<a href="movies.html">Movies</a>
+<a href="tvshows.html">TV Shows</a>
+</nav>
+</header>
+
+<section class="section">
+<h2>My Favorite Tunes</h2>
+
+<div class="projects-grid">
+
+<div class="project">
+<h3>Pop Genre</h3>
+<p><strong>Artist:</strong> Taylor Swift</p>
+<p><strong>Song:</strong> Cruel Summer</p>
+<p><strong>Album:</strong> Lover</p>
+<img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Taylor_Swift_-_Lover.png" alt="Lover Album Cover">
+</div>
+
+<div class="project">
+<h3>R&B Genre</h3>
+<p><strong>Artist:</strong> SZA</p>
+<p><strong>Song:</strong> Snooze</p>
+<p><strong>Album:</strong> SOS</p>
+<img src="https://upload.wikimedia.org/wikipedia/en/2/23/SZA_-_SOS.png" alt="SOS Album Cover">
+</div>
+
+</div>
+</section>
+
+</body>
+</html>
