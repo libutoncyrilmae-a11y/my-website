@@ -46,7 +46,7 @@
             padding: 1.5rem 5%;
             z-index: 999;
             border-bottom: 2px solid var(--border-line);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         nav {
@@ -67,7 +67,8 @@
             color: var(--primary-red);
         }
 
-        main, .section {
+        main,
+        .section {
             padding-top: 100px;
         }
 
@@ -240,6 +241,28 @@
             color: var(--primary-red);
         }
 
+        .about-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .about-btn {
+            background-color: #B2B09B;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .about-btn:hover {
+            background-color: var(--primary-red);
+        }
+
         @media (max-width: 900px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -265,7 +288,6 @@
 </head>
 
 <body>
-
 <header>
     <nav>
         <a href="#top">Home</a>
@@ -301,6 +323,13 @@
             I consider myself an eager and adaptive person. I love taking on new challenges,
             learning from experiences, and continuously improving my skills every step of the way.
         </p>
+
+        <div class="about-buttons">
+            <a href="#" class="about-btn">My Beats</a>
+            <a href="#" class="about-btn">My Film Movies</a>
+            <a href="#" class="about-btn">My Film TV Shows</a>
+        </div>
+        
         <a href="#top" class="back-to-top">Back to Top</a>
     </div>
 </section>
