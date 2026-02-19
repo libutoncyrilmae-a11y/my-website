@@ -1,278 +1,271 @@
 <!DOCTYPE html>
 <html lang="en" id="top">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Beats</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beats</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-:root {
-    --bg-cream: #FDFCF5;
-    --primary-red: #9E4244;
-    --text-dark: #2c2c2c;
-    --border-line: #000;
-    --muted-text: #555;
-}
+    <style>
+        :root {
+            --bg-cream: #FDFCF5;
+            --primary-red: #9E4244;
+            --text-dark: #2c2c2c;
+            --border-line: #000;
+            --muted-text: #555;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: var(--bg-cream);
-    color: var(--text-dark);
-    border-top: 20px solid var(--primary-red);
-    min-height: 100vh;
-}
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            border-top: 20px solid var(--primary-red);
+            min-height: 100vh;
+        }
 
-/* HEADER */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: var(--bg-cream);
-    padding: 1.5rem 5%;
-    border-bottom: 2px solid var(--border-line);
-    z-index: 999;
-}
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--bg-cream);
+            padding: 1.5rem 5%;
+            border-bottom: 2px solid var(--border-line);
+            z-index: 999;
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+        }
 
-nav a {
-    text-decoration: none;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: var(--text-dark);
-}
+        nav a {
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
 
-/* SECTION */
-.section {
-    padding: 8rem 10% 6rem;
-}
+        /* SECTION */
+        .section {
+            padding: 8rem 10% 6rem;
+        }
 
-.section-content {
-    max-width: 1100px;
-    margin: auto;
-}
+        .section-content {
+            max-width: 1100px;
+            margin: auto;
+        }
 
-/* TITLE */
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--primary-red);
-}
+        /* TITLE */
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-red);
+        }
 
-.subtitle {
-    text-align: center;
-    font-style: italic;
-    color: var(--muted-text);
-    margin-bottom: 4rem;
-}
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: var(--muted-text);
+            margin-bottom: 4rem;
+        }
 
-/* GRID */
-.beats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-}
+        /* GRID */
+        .beats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
 
-.beat-card {
-    text-align: center;
-}
+        /* CLICKABLE CARD */
+        .beat-card {
+            display: block;
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid var(--border-line);
+            border-radius: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* IMAGE */
-.image-placeholder {
-    aspect-ratio: 1/1;
-    background-color: #eee;
-    border: 2px solid var(--border-line);
-    margin-bottom: 1rem;
-}
+        /* Hover Effect */
+        .beat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
 
-/* TEXT */
-.artist-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    margin-bottom: 0.3rem;
-}
+        /* IMAGE */
+        .album-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            display: block;
+        }
 
-.album-name {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted-text);
-    margin-bottom: 0.7rem;
-}
+        /* TEXT */
+        .artist-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
 
-.review-snippet {
-    font-size: 0.9rem;
-    color: var(--muted-text);
-    line-height: 1.6;
-}
+        .album-name {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted-text);
+            margin-bottom: 0.7rem;
+        }
 
-/* BOTTOM DIVIDER */
-.bottom-divider {
-    border-top: 2px solid var(--border-line);
-    margin-top: 5rem;
-}
+        .review-snippet {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            line-height: 1.6;
+        }
 
-/* FOOTER */
-footer {
-    background-color: #DCDCD5;
-    padding: 2rem 0;
-    text-align: center;
-    margin-top: 4rem;
-}
+        /* FOOTER */
+        footer {
+            background-color: #DCDCD5;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-}
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-.social-links a {
-    color: var(--text-dark);
-    font-size: 1.4rem;
-}
+        .social-links a {
+            color: var(--text-dark);
+            font-size: 1.4rem;
+        }
 
-footer p {
-    font-size: 0.9rem;
-}
+        footer p {
+            font-size: 0.9rem;
+        }
 
-/* RESPONSIVE */
-@media(max-width: 900px){
-    .beats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+        /* RESPONSIVE */
+        @media(max-width: 900px){
+            .beats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
-@media(max-width: 600px){
-    .beats-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+        @media(max-width: 600px){
+            .beats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="movies.html">Movies</a>
-    <a href="tvshows.html">TV Shows</a>
-</nav>
-</header>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="movies.html">Movies</a>
+            <a href="tvshows.html">TV Shows</a>
+        </nav>
+    </header>
 
-<section class="section">
-<div class="section-content">
+    <section class="section">
+        <div class="section-content">
+            <h2>My Beats</h2>
+            <p class="subtitle">My personal favorites</p>
 
-<h2>My Beats</h2>
-<p class="subtitle">My personal favorites</p>
+            <div class="beats-grid">
+                <a href="https://open.spotify.com/album/79dL7FLiJFOO0EoehUHQBv" class="beat-card">
+                    <img src="images/currents.png" class="album-image">
+                    <div class="artist-name">Tame Impala</div>
+                    <div class="album-name">Currents</div>
+                    <div class="review-snippet">
+                        It feels like being swept into a colorful wave of emotion that’s overwhelming yet strangely empowering.
+                    </div>
+                </a>
 
-<div class="beats-grid">
+                <a href="https://open.spotify.com/album/42cH7mrkfljkqkxA2Ip9Xq" class="beat-card">
+                    <img src="images/bethecowboy.jpg" class="album-image">
+                    <div class="artist-name">Mitski</div>
+                    <div class="album-name">Be The Cowboy</div>
+                    <div class="review-snippet">
+                        Composed and dramatic, but you can feel the vulnerability underneath.
+                    </div>
+                </a>
 
-    <div class="beat-card">
-        <a href="lyrics-page1.html">
-            <div class="image-placeholder"></div>
-        </a>
-        <div class="artist-name">Tame Impala</div>
-        <div class="album-name">Currents</div>
-        <div class="review-snippet">
-            A dreamy, late-night anthem wrapped in nostalgic synth textures.
+                <a href="https://open.spotify.com/album/78bpIziExqiI9qztvNFlQu" class="beat-card">
+                    <img src="images/am.png" class="album-image">
+                    <div class="artist-name">Arctic Monkeys</div>
+                    <div class="album-name">AM</div>
+                    <div class="review-snippet">
+                        Simple and bold, with a cool, late-night confidence.
+                    </div>
+                </a>
+
+                <a href="https://open.spotify.com/album/31qVWUdRrlb8thMvts0yYL" class="beat-card">
+                    <img src="images/theslowrush.png" class="album-image">
+                    <div class="artist-name">Tame Impala</div>
+                    <div class="album-name">The Slow Rush</div>
+                    <div class="review-snippet">
+                        It captures the quiet, beautiful loneliness of time slowly slipping away.
+                    </div>
+                </a>
+
+                <a href="https://open.spotify.com/album/6lbrHERXve89hrxuCpsJOg" class="beat-card">
+                    <img src="images/portals.png" class="album-image">
+                    <div class="artist-name">Melanie Martinez</div>
+                    <div class="album-name">Portals</div>
+                    <div class="review-snippet">
+                        A strange, magical rebirth that feels freeing and chaotic.
+                    </div>
+                </a>
+
+                <a href="https://open.spotify.com/playlist/6J9e5CSe67b2uuhlmY539p" class="beat-card">
+                    <img src="images/crybaby.png" class="album-image">
+                    <div class="artist-name">Melanie Martinez</div>
+                    <div class="album-name">Cry Baby</div>
+                    <div class="review-snippet">
+                        Soft and pastel on the surface, but deeply honest about pain underneath.
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="beat-card">
-        <a href="lyrics-page2.html">
-            <div class="image-placeholder"></div>
-        </a>
-        <div class="artist-name">Mitski</div>
-        <div class="album-name">Be The Cowboy</div>
-        <div class="review-snippet">
-            Sharp lyrics layered over minimal production and emotional restraint.
+    <footer>
+        <div class="social-links">
+            <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
         </div>
-    </div>
-
-    <div class="beat-card">
-        <a href="lyrics-page3.html">
-            <div class="image-placeholder"></div>
-        </a>
-        <div class="artist-name">Arctic Monkeys</div>
-        <div class="album-name">AM</div>
-        <div class="review-snippet">
-            Soft melodies that feel both intimate and expansive.
-        </div>
-    </div>
-
-    <div class="beat-card">
-        <a href="lyrics-page4.html">
-            <div class="image-placeholder"></div>
-        </a>
-        <div class="artist-name">My Chemical Romance</div>
-        <div class="album-name">The Black Parade</div>
-        <div class="review-snippet">
-            A balance of vulnerability and confident storytelling.
-        </div>
-    </div>
-
-    <div class="beat-card">
-        <a href="lyrics-page5.html">
-            <div class="image-placeholder"></div>
-        </a>
-        <div class="artist-name">Melanie Martinez</div>
-        <div class="album-name">Portals</div>
-        <div class="review-snippet">
-            Clean production elevated by emotionally raw vocals.
-        </div>
-    </div>
-
-    <div class="beat-card">
-        <a href="lyrics-page6.html">
-            <div class="image-placeholder"></div>
-        </a>
-        <div class="artist-name">Melanie Martinez</div>
-        <div class="album-name">Cry Baby</div>
-        <div class="review-snippet">
-            Subtle rhythms and layered ambience for reflective listening.
-        </div>
-    </div>
-
-</div>
-
-<div class="bottom-divider"></div>
-
-</div>
-</section>
-
-<footer>
-    <div class="social-links">
-        <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-    <p>&copy; Cyril Libuton</p>
-</footer>
+        <p>&copy; Cyril Libuton</p>
+    </footer>
 
 </body>
 </html>
