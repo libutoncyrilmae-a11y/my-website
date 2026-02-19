@@ -154,14 +154,14 @@
             line-height: 1.5;
         }
 
-        /* Trailer stretches to fill remaining space under description */
+        /* Responsive embedded YouTube trailers */
         .trailer {
-            position: relative;
             width: 100%;
-            flex-grow: 1; /* fill remaining space */
+            margin-top: 1rem;
             border-radius: 8px;
             overflow: hidden;
-            margin-top: 1rem;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 ratio */
         }
 
         .trailer iframe {
@@ -213,13 +213,7 @@
             }
 
             .trailer {
-                flex-grow: 0; /* on mobile just below text */
-                width: 100%;
-                padding-top: 50%;
-            }
-
-            .trailer iframe {
-                position: absolute;
+                padding-top: 50%; /* taller on mobile */
             }
 
             .section {
