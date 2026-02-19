@@ -34,7 +34,7 @@ body {
     border-top: 20px solid var(--primary-red);
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
     position: fixed;
     top: 0;
@@ -43,7 +43,6 @@ header {
     background-color: var(--bg-cream);
     padding: 1.5rem 5%;
     border-bottom: 2px solid var(--border-line);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     z-index: 999;
 }
 
@@ -56,7 +55,7 @@ nav {
 nav a {
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-dark);
     transition: 0.3s ease;
 }
@@ -65,7 +64,7 @@ nav a:hover {
     color: var(--primary-red);
 }
 
-/* ===== SECTION ===== */
+/* SECTION */
 .section {
     padding: 9rem 8% 5rem;
 }
@@ -79,19 +78,24 @@ h2 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     color: var(--primary-red);
 }
 
-/* ===== ARTIST BLOCK ===== */
+/* FEATURE STYLE BLOCK */
 .artist-block {
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 3rem 0;
     border-bottom: 2px solid var(--border-line);
 }
 
-.artist-title {
+.artist-info {
     font-family: 'Playfair Display', serif;
+}
+
+.artist-title {
     font-size: 1.8rem;
     color: var(--primary-red);
     margin-bottom: 0.5rem;
@@ -99,43 +103,33 @@ h2 {
 
 .album-name {
     font-style: italic;
+    color: #666;
+}
+
+/* SONG LIST */
+.song-list {
+    list-style: none;
+}
+
+.song-list li {
     margin-bottom: 1.5rem;
-    color: #555;
-}
-
-/* ===== SONG GRID ===== */
-.song-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.song-card {
-    background: white;
-    padding: 1.5rem;
-    border-left: 5px solid var(--primary-red);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
-.song-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+.song-list li:hover {
+    color: var(--primary-red);
+    padding-left: 8px;
 }
 
-.song-title {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.song-card small {
-    color: #777;
-}
-
-/* ===== BACK TO TOP ===== */
+/* BACK TO TOP */
 .back-to-top {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .back-to-top a {
@@ -149,8 +143,12 @@ h2 {
     text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:768px){
+    .artist-block {
+        grid-template-columns: 1fr;
+    }
+
     nav {
         gap: 2rem;
     }
@@ -180,59 +178,44 @@ h2 {
 
 <!-- Tame Impala -->
 <div class="artist-block">
-    <div class="artist-title">Tame Impala</div>
-    <div class="album-name">Album: Currents</div>
-
-    <div class="song-grid">
-        <div class="song-card">
-            <div class="song-title">The Less I Know The Better</div>
-            <small>Favorite vibe: Late night drive energy</small>
-        </div>
-        <div class="song-card">
-            <div class="song-title">Eventually</div>
-            <small>Emotional but freeing</small>
-        </div>
-        <div class="song-card">
-            <div class="song-title">New Person, Same Old Mistakes</div>
-            <small>Dreamy & reflective</small>
-        </div>
+    <div class="artist-info">
+        <div class="artist-title">Tame Impala</div>
+        <div class="album-name">Album: Currents</div>
     </div>
+
+    <ul class="song-list">
+        <li>The Less I Know The Better</li>
+        <li>Eventually</li>
+        <li>New Person, Same Old Mistakes</li>
+    </ul>
 </div>
 
 <!-- Mitski -->
 <div class="artist-block">
-    <div class="artist-title">Mitski</div>
-    <div class="album-name">Album: Be the Cowboy</div>
-
-    <div class="song-grid">
-        <div class="song-card">
-            <div class="song-title">Nobody</div>
-        </div>
-        <div class="song-card">
-            <div class="song-title">Me and My Husband</div>
-        </div>
-        <div class="song-card">
-            <div class="song-title">Why Didn't You Stop Me</div>
-        </div>
+    <div class="artist-info">
+        <div class="artist-title">Mitski</div>
+        <div class="album-name">Album: Be the Cowboy</div>
     </div>
+
+    <ul class="song-list">
+        <li>Nobody</li>
+        <li>Me and My Husband</li>
+        <li>Why Didn't You Stop Me</li>
+    </ul>
 </div>
 
 <!-- Arctic Monkeys -->
 <div class="artist-block">
-    <div class="artist-title">Arctic Monkeys</div>
-    <div class="album-name">Album: AM</div>
-
-    <div class="song-grid">
-        <div class="song-card">
-            <div class="song-title">Knee Socks</div>
-        </div>
-        <div class="song-card">
-            <div class="song-title">Snap Out of It</div>
-        </div>
-        <div class="song-card">
-            <div class="song-title">I Want It All</div>
-        </div>
+    <div class="artist-info">
+        <div class="artist-title">Arctic Monkeys</div>
+        <div class="album-name">Album: AM</div>
     </div>
+
+    <ul class="song-list">
+        <li>Knee Socks</li>
+        <li>Snap Out of It</li>
+        <li>I Want It All</li>
+    </ul>
 </div>
 
 <div class="back-to-top">
