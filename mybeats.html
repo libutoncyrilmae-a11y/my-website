@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Beats</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -14,47 +16,148 @@
     --text-dark: #2c2c2c;
     --border-line: #000;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: var(--bg-cream);
     color: var(--text-dark);
     border-top: 20px solid var(--primary-red);
-    margin:0;
 }
+
+/* ===== HEADER ===== */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-cream);
     padding: 1.5rem 5%;
     border-bottom: 2px solid var(--border-line);
-    text-align:center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    z-index: 999;
 }
-nav a {
-    margin: 0 2rem;
-    text-decoration:none;
-    font-family:'Playfair Display', serif;
-    color:var(--text-dark);
-}
-nav a:hover { color: var(--primary-red); }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-red);
+}
+
+/* ===== SECTION ===== */
 .section {
-    padding: 5rem 10%;
-    border-top:2px solid var(--border-line);
+    padding: 9rem 8% 5rem;
 }
-.section h2 {
-    font-family:'Playfair Display', serif;
-    font-size:2.5rem;
+
+.section-content {
+    max-width: 1100px;
+    margin: auto;
 }
-.projects-grid {
-    display:grid;
-    gap:30px;
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-red);
 }
-.project {
-    background:white;
-    padding:25px;
-    border-left:6px solid var(--primary-red);
-    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+
+/* ===== ARTIST BLOCK ===== */
+.artist-block {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-line);
 }
-.project img {
-    width:200px;
-    margin-top:10px;
+
+.artist-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.album-name {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+/* ===== SONG GRID ===== */
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.song-card {
+    background: white;
+    padding: 1.5rem;
+    border-left: 5px solid var(--primary-red);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+}
+
+.song-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.song-card small {
+    color: #777;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+.back-to-top a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    nav {
+        gap: 2rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
 }
 </style>
 </head>
@@ -63,32 +166,77 @@ nav a:hover { color: var(--primary-red); }
 
 <header>
 <nav>
-<a href="index.html">Home</a>
-<a href="mybeats.html">My Beats</a>
-<a href="movies.html">Movies</a>
-<a href="tvshows.html">TV Shows</a>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="movies.html">Movies</a>
+    <a href="tvshows.html">TV Shows</a>
 </nav>
 </header>
 
 <section class="section">
-<h2>My Favorite Tunes</h2>
+<div class="section-content">
 
-<div class="projects-grid">
+<h2>My Beats</h2>
 
-<div class="project">
-<h3>Pop Genre</h3>
-<p><strong>Artist:</strong> Taylor Swift</p>
-<p><strong>Song:</strong> Cruel Summer</p>
-<p><strong>Album:</strong> Lover</p>
-<img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Taylor_Swift_-_Lover.png" alt="Lover Album Cover">
+<!-- Tame Impala -->
+<div class="artist-block">
+    <div class="artist-title">Tame Impala</div>
+    <div class="album-name">Album: Currents</div>
+
+    <div class="song-grid">
+        <div class="song-card">
+            <div class="song-title">The Less I Know The Better</div>
+            <small>Favorite vibe: Late night drive energy</small>
+        </div>
+        <div class="song-card">
+            <div class="song-title">Eventually</div>
+            <small>Emotional but freeing</small>
+        </div>
+        <div class="song-card">
+            <div class="song-title">New Person, Same Old Mistakes</div>
+            <small>Dreamy & reflective</small>
+        </div>
+    </div>
 </div>
 
-<div class="project">
-<h3>R&B Genre</h3>
-<p><strong>Artist:</strong> SZA</p>
-<p><strong>Song:</strong> Snooze</p>
-<p><strong>Album:</strong> SOS</p>
-<img src="https://upload.wikimedia.org/wikipedia/en/2/23/SZA_-_SOS.png" alt="SOS Album Cover">
+<!-- Mitski -->
+<div class="artist-block">
+    <div class="artist-title">Mitski</div>
+    <div class="album-name">Album: Be the Cowboy</div>
+
+    <div class="song-grid">
+        <div class="song-card">
+            <div class="song-title">Nobody</div>
+        </div>
+        <div class="song-card">
+            <div class="song-title">Me and My Husband</div>
+        </div>
+        <div class="song-card">
+            <div class="song-title">Why Didn't You Stop Me</div>
+        </div>
+    </div>
+</div>
+
+<!-- Arctic Monkeys -->
+<div class="artist-block">
+    <div class="artist-title">Arctic Monkeys</div>
+    <div class="album-name">Album: AM</div>
+
+    <div class="song-grid">
+        <div class="song-card">
+            <div class="song-title">Knee Socks</div>
+        </div>
+        <div class="song-card">
+            <div class="song-title">Snap Out of It</div>
+        </div>
+        <div class="song-card">
+            <div class="song-title">I Want It All</div>
+        </div>
+    </div>
+</div>
+
+<div class="back-to-top">
+    <a href="#top">↑ Back to Top</a>
 </div>
 
 </div>
