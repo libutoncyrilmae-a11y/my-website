@@ -78,11 +78,20 @@ h2 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     color: var(--primary-red);
 }
 
-/* FEATURE STYLE BLOCK */
+/* SQUARE IMAGE PLACEHOLDER */
+.feature-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 4rem auto;
+    border: 3px solid var(--border-line);
+    background-color: #eee;
+}
+
+/* ARTIST BLOCK */
 .artist-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -117,11 +126,15 @@ h2 {
     font-size: 1.4rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.5rem;
-    transition: 0.3s ease;
-    cursor: pointer;
 }
 
-.song-list li:hover {
+.song-list a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: 0.3s ease;
+}
+
+.song-list a:hover {
     color: var(--primary-red);
     padding-left: 8px;
 }
@@ -147,6 +160,11 @@ h2 {
 @media(max-width:768px){
     .artist-block {
         grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        width: 220px;
+        height: 220px;
     }
 
     nav {
@@ -176,6 +194,9 @@ h2 {
 
 <h2>My Beats</h2>
 
+<!-- Square Image Placeholder -->
+<div class="feature-image"></div>
+
 <!-- Tame Impala -->
 <div class="artist-block">
     <div class="artist-info">
@@ -184,9 +205,9 @@ h2 {
     </div>
 
     <ul class="song-list">
-        <li>The Less I Know The Better</li>
-        <li>Eventually</li>
-        <li>New Person, Same Old Mistakes</li>
+        <li><a href="lyrics-less-i-know.html">The Less I Know The Better</a></li>
+        <li><a href="lyrics-eventually.html">Eventually</a></li>
+        <li><a href="lyrics-new-person.html">New Person, Same Old Mistakes</a></li>
     </ul>
 </div>
 
@@ -198,9 +219,9 @@ h2 {
     </div>
 
     <ul class="song-list">
-        <li>Nobody</li>
-        <li>Me and My Husband</li>
-        <li>Why Didn't You Stop Me</li>
+        <li><a href="lyrics-nobody.html">Nobody</a></li>
+        <li><a href="lyrics-me-and-my-husband.html">Me and My Husband</a></li>
+        <li><a href="lyrics-why-didnt-you-stop-me.html">Why Didn't You Stop Me</a></li>
     </ul>
 </div>
 
@@ -212,9 +233,9 @@ h2 {
     </div>
 
     <ul class="song-list">
-        <li>Knee Socks</li>
-        <li>Snap Out of It</li>
-        <li>I Want It All</li>
+        <li><a href="lyrics-knee-socks.html">Knee Socks</a></li>
+        <li><a href="lyrics-snap-out-of-it.html">Snap Out of It</a></li>
+        <li><a href="lyrics-i-want-it-all.html">I Want It All</a></li>
     </ul>
 </div>
 
