@@ -74,53 +74,10 @@
             justify-content: center;
         }
 
-        .collage-container {
-            display: grid;
-            width: 100%;
-            max-width: 1000px;
-            height: 80vh;
-            gap: 10px;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-        }
-
-        .item {
-            background-size: cover;
-            background-position: center;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: white;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-        }
-
-        .japan {
-            grid-row: 1 / 5;
-            grid-column: 1 / 2;
-        }
-
-        .rome {
-            grid-row: 1 / 2;
-            grid-column: 2 / 4;
-        }
-
-        .china {
-            grid-row: 2 / 5;
-            grid-column: 2 / 3;
-        }
-
-        .paris {
-            grid-row: 2 / 3;
-            grid-column: 3 / 4;
-        }
-
-        .spain {
-            grid-row: 3 / 5;
-            grid-column: 3 / 4;
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
         }
 
         footer {
@@ -146,18 +103,6 @@
         .social-links a:hover {
             color: var(--primary-red);
         }
-
-        @media (max-width: 900px) {
-            .collage-container {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                height: auto;
-            }
-
-            .item {
-                height: 250px;
-            }
-        }
     </style>
 </head>
 
@@ -174,12 +119,15 @@
 </header>
 
 <main>
-    <div class="collage-container">
-        <div class="item japan" style="background-image: url('images/collage/japan.jpg');"></div>
-        <div class="item rome" style="background-image: url('images/collage/rome.jpg');"></div>
-        <div class="item china" style="background-image: url('images/collage/china.jpg');"></div>
-        <div class="item paris" style="background-image: url('images/collage/paris.jpg');"></div>
-        <div class="item spain" style="background-image: url('images/collage/spain.jpg');"></div>
+    <div class="collage-wrapper" style="width:1000px; height:800px; max-width:100%; margin:0 auto;">
+        <img src="images/collagee.jpg" usemap="#image-map" alt="Five Places I Wanted To Visit" style="width:100%; height:100%; display:block;">
+        <map name="image-map">
+            <area target="_blank" alt="japan" title="japan" href="" coords="74,170,388,577" shape="rect">
+            <area target="_blank" alt="china" title="china" href="" coords="676,421,693,658,886,656,886,399,786,288,721,355" shape="poly">
+            <area target="_blank" alt="spain" title="spain" href="" coords="971,483,1165,657" shape="rect">
+            <area target="_blank" alt="rome" title="rome" href="" coords="905,96,71" shape="circle">
+            <area target="_blank" alt="paris" title="paris" href="" coords="1047,215,1081,343,1018,347" shape="poly">
+        </map>
     </div>
 </main>
 
