@@ -4,141 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Places To Visit</title>
-
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        :root {
-            --bg-cream: #FDFCF5;
-            --primary-red: #9E4244;
-            --text-dark: #2c2c2c;
-            --border-line: #000;
-        }
-
-        html { scroll-behavior: smooth; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: 'Lato', sans-serif;
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
-            border-top: 20px solid var(--primary-red);
-            min-height: 100vh;
+            background-color: #FDFCF5;
+            text-align: center;
         }
-
-        header {
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            background-color: var(--bg-cream);
-            padding: 1.5rem 5%;
-            z-index: 999;
-            border-bottom: 2px solid var(--border-line);
+        img {
+            max-width: 90%;
+            height: auto;
         }
-
-        nav { display: flex; justify-content: center; gap: 4rem; }
-        nav a {
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            color: var(--text-dark);
-            transition: 0.3s ease;
-        }
-        nav a:hover { color: var(--primary-red); }
-
-        main {
-            padding-top: 120px;
-            padding-bottom: 4rem;
-            display: flex; justify-content: center;
-        }
-
-        .collage-container {
-            display: grid;
-            width: 100%;
-            max-width: 1000px;
-            height: 80vh;
-            gap: 10px;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-        }
-
-        /* Base style for all shapes */
-        .item {
-            background-size: cover;
-            background-position: center;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-
-        /* Shapes */
-        .japan { grid-row: 1 / 5; grid-column: 1 / 2; clip-path: inset(0); }
-        .rome { grid-row: 1 / 2; grid-column: 2 / 4; clip-path: circle(50% at 50% 50%); }
-        .china { grid-row: 2 / 5; grid-column: 2 / 3; clip-path: polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%); }
-        .paris { grid-row: 2 / 3; grid-column: 3 / 4; clip-path: polygon(50% 0%,0% 100%,100% 100%); }
-        .spain { grid-row: 3 / 5; grid-column: 3 / 4; aspect-ratio: 1 / 1; }
-
-        /* Hover border for shapes */
-        .item:hover {
-            outline: 2px solid #000;
-            outline-offset: -2px;
+        area {
             cursor: pointer;
         }
-
-        footer {
-            background-color: #DCDCD5;
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
-        .social-links a { color: var(--text-dark); font-size: 1.4rem; transition: 0.3s ease; }
-        .social-links a:hover { color: var(--primary-red); }
-
-        @media (max-width: 900px) {
-            .collage-container { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
-            .item { height: 250px; }
+        /* Optional: highlight shape on hover using outline */
+        area:hover {
+            outline: 2px solid red;
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <nav>
-        <a href="index.html#top">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="aboutme.html">Biography</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#contacts">Contacts</a>
-    </nav>
-</header>
+<h1>Dream Places</h1>
 
-<main>
-    <div class="collage-container">
-        <a href="link" target="_blank" class="item japan" style="background-image: url('images/collage/japan.jpg');"></a>
-        <a href="link" target="_blank" class="item rome" style="background-image: url('images/collage/rome.jpg');"></a>
-        <a href="link" target="_blank" class="item china" style="background-image: url('images/collage/china.jpg');"></a>
-        <a href="link" target="_blank" class="item paris" style="background-image: url('images/collage/paris.jpg');"></a>
-        <a href="link" target="_blank" class="item spain" style="background-image: url('images/collage/spain.jpg');"></a>
-    </div>
-</main>
+<!-- Japan Image with Map -->
+<img src="images/collage/japan.jpg" usemap="#japanmap" alt="Japan">
+<map name="japanmap">
+    <!-- Rectangle portrait -->
+    <area shape="rect" coords="20,10,180,400" href="PASTE-JAPAN-LINK" target="_blank" alt="Japan">
+</map>
 
-<footer>
-    <div class="social-links">
-        <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-    <p>&copy; Cyril Libuton</p>
-</footer>
+<!-- Paris Image with Map -->
+<img src="images/collage/paris.jpg" usemap="#parismap" alt="Paris">
+<map name="parismap">
+    <!-- Triangle -->
+    <area shape="poly" coords="150,0,0,300,300,300" href="PASTE-PARIS-LINK" target="_blank" alt="Paris">
+</map>
+
+<!-- Rome Image with Map -->
+<img src="images/collage/rome.jpg" usemap="#romemap" alt="Rome">
+<map name="romemap">
+    <!-- Circle -->
+    <area shape="circle" coords="150,150,150" href="PASTE-ROME-LINK" target="_blank" alt="Rome">
+</map>
+
+<!-- China Image with Map -->
+<img src="images/collage/china.jpg" usemap="#chinamap" alt="China">
+<map name="chinamap">
+    <!-- Pentagon -->
+    <area shape="poly" coords="150,0,290,100,235,300,65,300,10,100" href="PASTE-CHINA-LINK" target="_blank" alt="China">
+</map>
+
+<!-- Spain Image with Map -->
+<img src="images/collage/spain.jpg" usemap="#spainmap" alt="Spain">
+<map name="spainmap">
+    <!-- Square -->
+    <area shape="rect" coords="0,0,300,300" href="PASTE-SPAIN-LINK" target="_blank" alt="Spain">
+</map>
 
 </body>
 </html>
