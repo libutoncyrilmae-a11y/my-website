@@ -74,10 +74,18 @@
             justify-content: center;
         }
 
-        img {
-            display: block;
+        .collage-wrapper {
+            width: 1000px; /* original screenshot width */
             max-width: 100%;
-            height: auto;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .collage-wrapper img {
+            display: block;
+            width: 100%;
+            height: auto; /* preserves aspect ratio, no vertical stretch */
+            margin: 0;
         }
 
         footer {
@@ -119,23 +127,25 @@
 </header>
 
 <main>
-    <div class="collage-wrapper" style="max-width:1000px; width:100%; margin:0 auto;">
-        <img src="images/collage/collagee.jpg" usemap="#image-map" alt="Dream Places Collage" style="width:100%; height:auto; display:block;">
+    <div class="collage-wrapper">
+        <!-- Your cropped screenshot of the collage layout -->
+        <img src="images/collage/collagee.jpg" usemap="#image-map" alt="Dream Places Collage">
+
         <map name="image-map">
-            <area target="_blank" alt="japan" title="japan" href="https://en.wikipedia.org/wiki/Shibuya" coords="391,434,733,852" shape="rect">
-            <area target="_blank" alt="china" title="china" href="https://en.wikipedia.org/wiki/AAAAA_Tourist_Attractions_of_China" coords="993,934,1103,934,1213,935,1203,624,1103,588,989,663,991,896" shape="poly">
-            <area target="_blank" alt="rome" title="rome" href="https://en.wikipedia.org/wiki/Colosseum" coords="1245,391,66" shape="circle">
-            <area target="_blank" alt="paris" title="paris" href="https://en.wikipedia.org/wiki/Paris" coords="1370,486,1343,637,1407,636" shape="poly">
-            <area target="_blank" alt="spain" title="spain" href="https://en.wikipedia.org/wiki/Barcelona" coords="1294,761,1489,946" shape="rect">
+            <!-- Coordinates nudged slightly left to fix right shift -->
+            <area target="_blank" alt="japan" title="japan" href="https://en.wikipedia.org/wiki/Shibuya" coords="381,434,723,852" shape="rect">
+            <area target="_blank" alt="china" title="china" href="https://en.wikipedia.org/wiki/AAAAA_Tourist_Attractions_of_China" coords="983,934,1093,934,1203,935,1193,624,1093,588,979,663,981,896" shape="poly">
+            <area target="_blank" alt="rome" title="rome" href="https://en.wikipedia.org/wiki/Colosseum" coords="1235,391,66" shape="circle">
+            <area target="_blank" alt="paris" title="paris" href="https://en.wikipedia.org/wiki/Paris" coords="1360,486,1333,637,1397,636" shape="poly">
+            <area target="_blank" alt="spain" title="spain" href="https://en.wikipedia.org/wiki/Barcelona" coords="1284,761,1479,946" shape="rect">
         </map>
     </div>
 
+    <!-- Responsive image map script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (typeof imageMapResize === 'function') {
-                imageMapResize();
-            }
+            imageMapResize(); // ensures clickable areas scale with image
         });
     </script>
 </main>
@@ -152,7 +162,3 @@
 
 </body>
 </html>
-
-
-
-
