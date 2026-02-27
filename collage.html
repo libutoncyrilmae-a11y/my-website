@@ -49,22 +49,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size:2.8rem;
-            margin-bottom:2rem;
-            text-align:center;
-            color: var(--primary-red);
-        }
-      
-
-        .divider {
-            width: 1200px;
-            margin: 10px auto 40px;
-            border: none;
-            border-top: 2px solid var(--primary-red);
-        }  
-      
         nav {
             display: flex;
             justify-content: center;
@@ -84,23 +68,43 @@
         }
 
         main {
-            padding-top: 120px;
+            padding-top: 140px;
             padding-bottom: 4rem;
-            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: var(--muted-text);
+            margin-bottom: 2rem;
+        }
+
+        .divider {
+            width: 100%;
+            height: 3px;
+            background-color: var(--border-line);
+            margin: 3rem 0;
+            border-radius: 2px;
         }
 
         .collage-wrapper {
             width: 1000px;
             max-width: 100%;
             margin: 0 auto;
-            padding: 0;
         }
 
         .collage-wrapper img {
             display: block;
             width: 100%;
             height: auto;
-            margin: 0;
         }
 
         footer {
@@ -126,6 +130,10 @@
         .social-links a:hover {
             color: var(--primary-red);
         }
+
+        footer p {
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 
@@ -143,7 +151,8 @@
     
 <main>
     <h1>Dream Places To Visit</h1>
-    <hr class="divider">
+    <p class="subtitle">My absolute top 5</p>
+    <div class="divider"></div>
   
     <div class="collage-wrapper">
         <img src="images/collage/collagee.jpg" usemap="#image-map" alt="Dream Places Collage">
@@ -156,9 +165,9 @@
             <area target="_blank" alt="paris" title="Paris, France" href="france.html" coords="1036,213,1070,341,1007,345" shape="poly">
         </map>
     </div>
-    <hr class="divider">
-  
-    <!-- (need q) map script -->
+
+    <div class="divider"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -179,5 +188,3 @@
 
 </body>
 </html>
-
-
