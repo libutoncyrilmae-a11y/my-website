@@ -86,7 +86,7 @@
             text-align: left;
             display: inline-block;
             position: relative;
-            left: -5vw; /* nudges left for desktop */
+            left: -5vw;
         }
 
         .title-section h2 {
@@ -98,8 +98,8 @@
         }
 
         .divider {
-            width: 100%; /* full width */
-            margin: 2rem 0; /* top and bottom spacing */
+            width: 100%;
+            margin: 2rem 0;
             border: none;
             border-top: 2px solid var(--primary-red);
         }
@@ -114,8 +114,12 @@
         }
 
         .collage-wrapper {
-            width: 800px; /* slightly narrower for staggered effect */
+            width: 800px;
             margin: 0 auto 3rem;
+        }
+
+        .collage-wrapper a {
+            text-decoration: none; /* removes underline if link */
         }
 
         .collage-image {
@@ -124,6 +128,13 @@
             display: block;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .collage-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
         }
 
         footer {
@@ -181,7 +192,9 @@
         </div>
 
         <div class="collage-wrapper">
-            <img src="images/collage/Japan.png" alt="Collage of Shibuya, Japan" class="collage-image">
+            <a href="gallery.html">
+                <img src="images/collage/Japan.png" alt="Collage of Shibuya, Japan" class="collage-image">
+            </a>
         </div>
 
         <hr class="divider">
@@ -198,4 +211,3 @@
     </footer>
 </body>
 </html>
-
