@@ -86,7 +86,7 @@
             text-align: left;
             display: inline-block;
             position: relative;
-            left: -5vw; /* nudges left without breaking responsiveness */
+            left: -5vw; /* nudges left for desktop */
         }
 
         .title-section h2 {
@@ -99,14 +99,13 @@
 
         .divider {
             width: 100%; /* full width */
-            margin: 2rem 0; /* equal spacing top & bottom */
+            margin: 2rem 0; /* top and bottom spacing */
             border: none;
             border-top: 2px solid var(--primary-red);
         }
 
         .description {
             width: 800px;
-            max-width: 90%;
             margin: 0 auto 3rem;
             font-size: 1.1rem;
             line-height: 1.9;
@@ -115,18 +114,17 @@
         }
 
         .collage-wrapper {
-            width: 600px; /* smaller than description */
-            max-width: 90%;
+            width: 800px; /* slightly narrower for staggered effect */
             margin: 0 auto 3rem;
         }
 
         .collage-image {
-    width: 100%;      /* fills the wrapper */
-    height: auto;     /* keeps original aspect ratio */
-    display: block;   /* removes inline spacing */
-    border-radius: 8px; /* optional, adds slight rounding */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional subtle shadow */
-}
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
 
         footer {
             background-color: #DCDCD5;
@@ -150,18 +148,6 @@
 
         .social-links a:hover {
             color: var(--primary-red);
-        }
-
-        @media (max-width: 768px) {
-            .title-section h1 {
-                left: -3vw;
-            }
-            .collage-wrapper {
-                width: 90%;
-            }
-            .description {
-                width: 90%;
-            }
         }
     </style>
 </head>
@@ -195,9 +181,7 @@
         </div>
 
         <div class="collage-wrapper">
-            <div class="collage-wrapper">
-              <img src="images/collage/Japan.png" alt="Collage of Shibuya, Japan" class="collage-image">
-            </div>
+            <img src="images/shibuya-collage.jpg" alt="Collage of Shibuya, Japan" class="collage-image">
         </div>
 
         <hr class="divider">
