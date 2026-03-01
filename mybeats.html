@@ -59,6 +59,21 @@
             width: 55px;
         }
 
+        .back-to-top {
+         display: inline-block;
+         margin-top: 2rem;
+         font-family: 'Playfair Display', serif;
+         font-size: 0.95rem;
+         text-decoration: none;
+         color: var(--text-dark);
+         border-bottom: 1px solid var(--text-dark);
+         transition: 0.3s ease;
+         }
+         .back-to-top:hover {
+         color: var(--primary-red);
+         border-color: var(--primary-red);
+         }
+
         nav {
             display: flex;
             gap: 4rem;
@@ -260,6 +275,8 @@
                     </a>
                 </div>
 
+                <a href="#top" class="back-to-top">Back to Top</a>
+                
                 <div class="divider"></div>
             </div>
         </section>
@@ -276,3 +293,4 @@
     </footer>
 </body>
 </html>
+
