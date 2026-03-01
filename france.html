@@ -17,6 +17,7 @@
             --text-dark: #2c2c2c;
             --border-line: #000;
             --muted-text: #666;
+            --gray-btn: #B2B09B;
         }
 
         html {
@@ -43,15 +44,30 @@
             left: 0;
             width: 100%;
             background-color: var(--bg-cream);
-            padding: 1.5rem 5%;
+            padding: 1rem 5%;
             z-index: 999;
             border-bottom: 2px solid var(--border-line);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left-nav {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        header img {
+            width: 55px;
+        }
+
         nav {
             display: flex;
-            justify-content: center;
             gap: 4rem;
         }
 
@@ -67,8 +83,25 @@
             color: var(--primary-red);
         }
 
+        .back-to-collage {
+            background-color: var(--gray-btn);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .back-to-collage:hover {
+            background-color: var(--primary-red);
+        }
+
         main {
-            padding-top: 140px;
+            padding-top: 100px;
             padding-bottom: 4rem;
             text-align: center;
         }
@@ -137,6 +170,24 @@
             cursor: pointer;
         }
 
+        .back-to-top {
+            display: block;
+            margin: 2rem auto 2rem 10%;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--text-dark);
+            transition: 0.3s ease;
+            width: fit-content;
+            text-align: left;
+        }
+
+        .back-to-top:hover {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
         footer {
             background-color: #DCDCD5;
             padding: 2rem 0;
@@ -165,13 +216,22 @@
 
 <body>
     <header>
-        <nav>
-            <a href="index.html#top">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="aboutme.html">Biography</a>
-            <a href="index.html#projects">Projects</a>
-            <a href="index.html#contacts">Contacts</a>
-        </nav>
+        <div class="header-container">
+            <div class="left-nav">
+                <a href="images/blacklogo.png" target="_blank">
+                    <img src="images/blacklogo.png" alt="mylogo">
+                </a>
+                <nav>
+                    <a href="index.html#top">Home</a>
+                    <a href="china.html">China</a>
+                    <a href="italy.html">Italy</a>
+                    <a href="japan.html">Japan</a>
+                    <a href="spain.html">Spain</a>
+                </nav>
+            </div>
+            
+            <a href="collage.html" class="back-to-collage">Back to Collage</a>
+        </div>
     </header>
 
     <main>
@@ -198,6 +258,8 @@
             </a>
         </div>
 
+        <a href="#top" class="back-to-top">Back to Top</a>
+
         <hr class="divider">
     </main>
 
@@ -212,5 +274,3 @@
     </footer>
 </body>
 </html>
-
-
