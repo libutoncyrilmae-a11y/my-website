@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bucket List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-cream: #FDFCF5;
+            --primary-red: #9E4244;
+            --text-dark: #2c2c2c;
+            --border-line: #000;
+            --muted-text: #666;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            border-top: 20px solid var(--primary-red);
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-cream);
+            padding: 1rem 5%;
+            z-index: 999;
+            border-bottom: 2px solid var(--border-line);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        header img {
+            width: 55px;
+        }
+
+        nav {
+            display: flex;
+            gap: 4rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        main {
+            padding-top: 100px;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: var(--muted-text);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .divider-top {
+            width: 100%;
+            height: 1.6px;
+            background-color: var(--border-line);
+            margin: 1.5rem auto 3rem;
+            border-radius: 2px;
+            max-width: 900px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1.8px;
+            background-color: var(--border-line);
+            margin: 3rem auto;
+            border-radius: 2px;
+            max-width: 900px;
+        }
+
+        .bucket-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            justify-items: center;
+        }
+
+        .bucket-item {
+            background: white;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            max-width: 420px;
+            width: 100%;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .bucket-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .bucket-desc {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            flex-grow: 1;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #DCDCD5;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-dark);
+            font-size: 1.4rem;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-red);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 850px) {
+            .bucket-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="images/blacklogo.png" target="_blank">
+                <img src="images/blacklogo.png" alt="mylogo">
+            </a>
+            <nav>
+                <a href="index.html#top">Home</a>
+                <a href="collage.html">Dream Places</a>
+                <a href="bucket.html">Bucket List</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>My Bucket List</h1>
+        <p class="subtitle">Experiences and achievements I dream of accomplishing in my lifetime</p>
+        <div class="divider-top"></div>
+
+        <div class="bucket-grid">
+            <div class="bucket-item">
+                <h2 class="bucket-title">Grow My Crochet Business</h2>
+                <p class="bucket-desc">
+                    I dream of expanding my crochet business into something more, perhaps starting from booths is a great start.
+                    Hopefully with those experiences, I would get to start a yarn business of my own, being a supplier to many costumers.
+                </p>
+            </div>
+
+            <div class="bucket-item">
+                <h2 class="bucket-title">World Travel with Mom</h2>
+                <p class="bucket-desc">
+                    To create many memories with my mom is enough to fullfil my bucket list.
+                    Being able to travel around the world with her by my side is my number one goal.
+                </p>
+            </div>
+
+            <div class="bucket-item">
+                <h2 class="bucket-title">Own a Small Loft House</h2>
+                <p class="bucket-desc">
+                    A small loft house is the only house I can call a home.
+                    A warm, cozy, homy space that I can can my own, It may be small and simple, but it's mine.
+                </p>
+            </div>
+
+            <div class="bucket-item">
+                <h2 class="bucket-title">Live in China</h2>
+                <p class="bucket-desc">
+                    Living in China is not just a bucket list but a huge dream of mine. 
+                    When the time comes and I'm financially capabale enough, 
+                    I hope to settle in China and hopefully get to work there as well.
+                </p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <p>&copy; Cyril Libuton</p>
+    </footer>
+</body>
+</html>
