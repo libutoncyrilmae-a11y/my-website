@@ -132,7 +132,6 @@
             max-width: 380px;
             width: 100%;
             height: auto;
-            border: 8px solid #fff;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             position: relative;
             object-fit: cover;
@@ -192,7 +191,6 @@
             color: var(--primary-red);
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             gap: 30px;
@@ -227,6 +225,22 @@
             text-decoration: underline;
         }
 
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--text-dark);
+            transition: 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
         footer {
             background-color: #DCDCD5;
             padding: 2rem 0;
@@ -248,6 +262,51 @@
 
         .social-links a:hover {
             color: var(--primary-red);
+        }
+
+        /* ABOUT ME WITH VIDEO SIDE-BY-SIDE */
+        .about-me-container {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 2rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .about-me-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            text-align: justify; /* Justify text */
+        }
+
+        .portrait-video {
+            width: 250px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: none; /* Removed red border */
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image-container {
+                margin-top: 2rem;
+            }
+
+            .about-me-container {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 2rem;
+            }
+
+            .portrait-video {
+                width: 200px;
+                height: 360px;
+            }
         }
     </style>
 </head>
@@ -286,26 +345,31 @@
 <section id="about" class="section">
     <div class="section-content">
         <h2>About Me</h2>
-        <p>
-            Hi! I'm Cyril Mae Libuton, a 2nd year Computer Science student with a strong passion for coding
-            and continuous learning. I genuinely enjoy building things through code and
-            exploring new technologies.
-        </p>
-        <p>
-            I consider myself an eager and adaptive person. I love taking on new challenges,
-            learning from experiences, and continuously improving my skills every step of the way.
-        </p>
 
-        <div class="about-buttons">
-          <a href="mybeats.html" class="about-btn">My Beats</a>
-          <a href="myfilm.html" class="about-btn">My Film Movies</a>
-          <a href="myfilmtv.html" class="about-btn">My Film TV Shows</a>
+        <!-- SIDE-BY-SIDE TEXT + VIDEO -->
+        <div class="about-me-container">
+            <div class="about-me-text">
+                <p>Hi! I'm Cyril Mae Libuton, a 2nd year Computer Science student with a strong passion for coding and continuous learning. I genuinely enjoy building things through code and exploring new technologies.</p>
+                <p>I consider myself an eager and adaptive person. I love taking on new challenges, learning from experiences, and continuously improving my skills every step of the way.</p>
+
+                <div class="about-buttons">
+                    <a href="mybeats.html" class="about-btn">My Beats</a>
+                    <a href="myfilm.html" class="about-btn">My Film Movies</a>
+                    <a href="myfilmtv.html" class="about-btn">My Film TV Shows</a>
+                </div>
+
+                <div class="about-buttons">
+                    <a href="collage.html" class="about-btn">Dream Places To Visit</a>
+                    <a href="bucket.html" class="about-btn">My Bucket List</a>
+                </div>
+            </div>
+
+            <video class="portrait-video" autoplay muted loop playsinline>
+                <source src="myvideo.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <div class="about-buttons">
-          <a href="collage.html" class="about-btn">Dream Places To Visit</a>
-          <a href="bucket.html" class="about-btn">My Bucket List</a>
-        </div>
+        <a href="#top" class="back-to-top">Back to Top</a>
     </div>
 </section>
 
@@ -327,9 +391,33 @@
                 <a href="blog3.html">View Project →</a>
             </div>
         </div>
+
+        <a href="#top" class="back-to-top">Back to Top</a>
     </div>
 </section>
 
+<!-- Contacts Section -->
+<section id="contacts" class="section">
+    <div class="section-content">
+        <h2>Contacts</h2>
+        <p>
+            Email: 123cyrilmae@gmail.com <br>
+            Phone: 09184793447 <br>
+            Facebook: <a href="https://web.facebook.com/cycy.1123" class="text-link">Cyril Libuton</a>
+        </p>
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+</section>
+
+<footer>
+    <div class="social-links">
+        <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+    <p>&copy; Cyril Libuton</p>
+</footer>
+
 </body>
 </html>
-
