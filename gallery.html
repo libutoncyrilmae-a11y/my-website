@@ -16,6 +16,7 @@
     --primary-red: #9E4244;
     --text-dark: #2c2c2c;
     --border-line: #000;
+    --muted-text: #666;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -32,17 +33,26 @@ body {
 
 header {
     position: fixed;
-    top:0; left:0; width:100%;
+    top: 0; left: 0; width: 100%;
     background-color: var(--bg-cream);
     padding: 1.5rem 5%;
-    z-index:999;
+    z-index: 999;
     border-bottom: 2px solid var(--border-line);
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+header img {
+    width: 60px;
+}
+
 nav {
     display:flex;
-    justify-content:center;
     gap:4rem;
 }
 
@@ -51,9 +61,12 @@ nav a {
     font-family: 'Playfair Display', serif;
     font-size:1.2rem;
     color: var(--text-dark);
+    transition: 0.3s ease;
 }
 
 nav a:hover { color: var(--primary-red); }
+
+main { padding-top: 120px; }
 
 .section { padding: 8rem 5% 6rem; }
 
@@ -187,12 +200,18 @@ footer {
 <body>
 
 <header>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="aboutme.html">Biography</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="#contacts">Contacts</a>
-</nav>
+    <div class="header-container">
+        <a href="index.html">
+            <img src="images/blacklogo.png" alt="mylogo">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">Biography</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contacts">Contacts</a>
+        </nav>
+    </div>
 </header>
 
 <section class="section">
@@ -206,6 +225,7 @@ footer {
     <a href="#lover">My Lover</a>
 </div>
 
+<!-- Friends Collection -->
 <div id="friends" class="gallery-collection">
 <div class="collection-header"><div class="collection-title">Friends</div></div>
 <div class="gallery-row">
@@ -239,6 +259,7 @@ footer {
 <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
+<!-- Family Collection -->
 <div id="family" class="gallery-collection">
 <div class="collection-header"><div class="collection-title">Family</div></div>
 <div class="gallery-row">
@@ -272,6 +293,7 @@ footer {
 <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
+<!-- Hobby Collection -->
 <div id="hobby" class="gallery-collection">
 <div class="collection-header"><div class="collection-title">My Hobby</div></div>
 <div class="gallery-row">
@@ -305,6 +327,7 @@ footer {
 <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
+<!-- Lover Collection -->
 <div id="lover" class="gallery-collection">
 <div class="collection-header"><div class="collection-title">My Lover</div></div>
 <div class="gallery-row">
