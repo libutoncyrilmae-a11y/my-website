@@ -1,158 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NON-TECH PERSONAL VOICE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NON-TECH PERSONAL VOICE</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: #E3E3E3;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    /* header */
-    .heading {
-      background: #740A03;
-      height: 220px;
-    }
+    <style>
+        :root {
+            --bg-cream: #FDFCF5;
+            --primary-red: #9E4244;
+            --text-dark: #2c2c2c;
+            --border-line: #000;
+            --muted-text: #666;
+        }
 
-    .content-wrapper {
-      display: flex;
-      justify-content: center;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    /* white content box */
-    .content-box {
-      background: white;
-      max-width: 900px;
-      width: 100%;
-      padding: 70px 80px;
-      margin-top: -120px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .divider {
-      color: #740A03;
-      margin: 20px auto 30px;
-      border-top: 2px solid #000;
-    }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            border-top: 20px solid var(--primary-red);
+            min-height: 100vh;
+        }
 
-    .title {
-      font-family: Tahoma, Geneva, sans-serif;
-      font-size: 38px;
-      font-weight: 700;
-      line-height: 1.25;
-      color: #492828;
-      margin-bottom: 16px;
-    }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-cream);
+            padding: 1rem 5%;
+            z-index: 999;
+            border-bottom: 2px solid var(--border-line);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
 
-    .meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-    }
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
 
-    .name,
-    .date {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #37353E;
-      margin: 0;
-      font-weight: 400;
-    }
+        header img {
+            width: 55px;
+        }
 
-    .title2 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      color: #37353E;
-      font-weight: 550;
-      margin: 40px 0 12px;
-    }
+        nav {
+            display: flex;
+            gap: 4rem;
+        }
 
-    .bio {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      color: #37353E;
-      line-height: 1.7;
-      margin: 0 0 24px;
-      text-align: justify;
-    }
+        nav a {
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            transition: 0.3s ease;
+        }
 
-    b {
-      background-color: #f4cccc;
-      color: #740A03;
-      padding: 2px 4px;
-      border-radius: 3px;
-      font-weight: 600;
-    }
+        nav a:hover {
+            color: var(--primary-red);
+        }
 
-    .home-btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #740A03;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      letter-spacing: 1px;
-      padding: 10px 18px;
-      border-radius: 6px;
-      margin-bottom: 25px;
-      font-weight: 600;
-    }
+        main {
+            padding-top: 100px;
+            padding: 4rem 10%;
+        }
 
-    .home-btn:hover{
-      background: #5c0702;
-    }
-  </style>
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-box {
+            background: white;
+            width: 100%;
+            padding: 70px 80px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .divider {
+            color: var(--primary-red);
+            margin: 20px auto 30px;
+            border: none;
+            border-top: 2px solid var(--border-line);
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: var(--primary-red);
+            margin-bottom: 16px;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .name,
+        .date {
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .title2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            color: var(--text-dark);
+            font-weight: 550;
+            margin: 40px 0 12px;
+        }
+
+        .bio {
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin: 0 0 24px;
+            text-align: justify;
+        }
+
+        b {
+            background-color: #f4cccc;
+            color: var(--primary-red);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--text-dark);
+            transition: 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
+        footer {
+            background-color: #DCDCD5;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-dark);
+            font-size: 1.4rem;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-red);
+        }
+    </style>
 </head>
 
 <body>
-  <header class="heading"></header>
+    <header>
+        <div class="header-container">
+            <a href="images/blacklogo.png" target="_blank">
+                <img src="images/blacklogo.png" alt="mylogo">
+            </a>
+            <nav>
+                <a href="index.html#top">Home</a>
+                <a href="gallery.html">Blog 1</a>
+                <a href="aboutme.html">Blog 2</a>
+                <a href="index.html#projects">Blog 3</a>
+            </nav>
+        </div>
+    </header>
 
-  <main class="content-wrapper">
-    <section class="content-box">
-      
-      <h1 class="title">
-        A Doomscrolling<br>
-        Confession
-      </h1>
+    <main>
+        <div class="content-wrapper">
+            <section class="content-box">
+                <h1 class="title">
+                    A Doomscrolling<br>
+                    Confession
+                </h1>
 
-      <div class="meta">
-        <h3 class="name">By: Libuton, Cyril Mae S.</h3>
-        <span class="date">JAN / 16 / 2026</span>
-      </div>
+                <div class="meta">
+                    <h3 class="name">By: Libuton, Cyril Mae S.</h3>
+                    <span class="date">JAN / 16 / 2026</span>
+                </div>
 
-      <hr class="divider">
+                <hr class="divider">
 
-      <h4 class="title2">First Scroll of the Day</h4>
-      <p class="bio">
-        I know I’m not the only one, but I swear the <b>first thing I do when I wake up</b> is open the TikTok app. No coffee, no breakfast, just TikTok. It’s like a <b>muscle memory</b> to automatically open the app the moment I wake up. I can’t even get through the night without scrolling before I sleep. It gets so addicting that I end up staying awake all night, completely <b>sacrificing sleep</b> just for a few more scrolls.
-      </p>
+                <h4 class="title2">First Scroll of the Day</h4>
+                <p class="bio">
+                    I know I'm not the only one, but I swear the <b>first thing I do when I wake up</b> is open the TikTok app. No coffee, no breakfast, just TikTok. It's like a <b>muscle memory</b> to automatically open the app the moment I wake up. I can't even get through the night without scrolling before I sleep. It gets so addicting that I end up staying awake all night, completely <b>sacrificing sleep</b> just for a few more scrolls.
+                </p>
 
-      <h5 class="title2">Addicted & Annoyed</h5>
-      <p class="bio">
-        Thinking about it now, I honestly can’t believe I’m still this attached to the app. Back in the day, I had this weird <b>love-hate relationship</b> with the app right after it replaced Musical.ly. Remember Musical.ly? the app that basically became TikTok overnight. According to the rumors, <b>TikTok bought Musical.ly and rebranded it</b>, and naturally, a lot of Musical.ly users were offended. I get it, change is annoying when you love something the way it was. But over time, people just accepted it. Like, did they really have a choice? Not really. The important thing is <b>TikTok remained fun</b>, so fun that some of us sacrifice sleep just to scroll for a few minutes, which then turns into hours.
-        And then came the <i>“streak”</i> feature. You know, when you have to send videos to someone daily to keep that little fire going. It’s fun, it’s challenging and can also be a little pressuring. The moment you forget to <i>“ignite”</i> that fire, it’s like a friendship over case between you and your friend.
-        It’s wild to think how an app can be so tiny but take over so much of your time. But I guess that’s the magic of TikTok, it’s addictive, engaging, and somehow becomes part of your daily routine without you even realizing it.
-      </p>
+                <h5 class="title2">Addicted & Annoyed</h5>
+                <p class="bio">
+                    Thinking about it now, I honestly can't believe I'm still this attached to the app. Back in the day, I had this weird <b>love-hate relationship</b> with the app right after it replaced Musical.ly. Remember Musical.ly? the app that basically became TikTok overnight. According to the rumors, <b>TikTok bought Musical.ly and rebranded it</b>, and naturally, a lot of Musical.ly users were offended. I get it, change is annoying when you love something the way it was. But over time, people just accepted it. Like, did they really have a choice? Not really. The important thing is <b>TikTok remained fun</b>, so fun that some of us sacrifice sleep just to scroll for a few minutes, which then turns into hours.
+                    And then came the <i>"streak"</i> feature. You know, when you have to send videos to someone daily to keep that little fire going. It's fun, it's challenging and can also be a little pressuring. The moment you forget to <i>"ignite"</i> that fire, it's like a friendship over case between you and your friend.
+                    It's wild to think how an app can be so tiny but take over so much of your time. But I guess that's the magic of TikTok, it's addictive, engaging, and somehow becomes part of your daily routine without you even realizing it.
+                </p>
 
-      <h6 class="title2">One Last Scroll</h6>
-      <p class="bio">
-        At the end of the day, <b>TikTok is indeed hard to let go of</b>, especially when it has already become part of my daily routine. I’ve realized that while scrolling helps me relax, too much of it takes away something important, my sleep. My takeaway is simple, <b>enjoy the app, but don’t let it control the night!</b>
-      </p>
+                <h6 class="title2">One Last Scroll</h6>
+                <p class="bio">
+                    At the end of the day, <b>TikTok is indeed hard to let go of</b>, especially when it has already become part of my daily routine. I've realized that while scrolling helps me relax, too much of it takes away something important, my sleep. My takeaway is simple, <b>enjoy the app, but don't let it control the night!</b>
+                </p>
 
-      <a href="index.html" class="home-btn">HOME</a>
-    </section>
-  </main>
+                <a href="#top" class="back-to-top">Back to Top</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <p>&copy; Cyril Libuton</p>
+    </footer>
 </body>
 </html>
-
-
-
-
-
