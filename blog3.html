@@ -1,114 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Career n Future Goals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career n Future Goals</title>
 
-  <style>
-    body {
-      font-family: Tahoma, Geneva, sans-serif;
-      margin: 40px;
-      background-color: #ece7df;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    .container {
-      display: flex;
-      max-width: 900px;
-      border: 2px solid #1e2a38;
-      padding: 40px;
-      margin: 0 auto;
-      background-color: #ffffff;
-    }
+    <style>
+        :root {
+            --bg-cream: #FDFCF5;
+            --primary-red: #9E4244;
+            --text-dark: #2c2c2c;
+            --border-line: #000;
+            --muted-text: #666;
+        }
 
-    .sidebar {
-      flex: 1;
-      border-right: 2px solid #1e2a38;
-      padding-right: 30px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .sidebar h1 {
-      font-weight: 800;
-      font-size: 32px;
-      line-height: 1.1;
-      margin: 0;
-      color: #280905;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .name {
-      margin-top: 12px;
-      font-size: 15px;
-      color: #4a4a4a;
-      font-weight: 600;
-    }
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            border-top: 20px solid var(--primary-red);
+            min-height: 100vh;
+        }
 
-    .letter {
-      flex: 3;
-      padding-left: 40px;
-      font-size: 16px;
-      line-height: 1.7;
-    }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-cream);
+            padding: 1rem 5%;
+            z-index: 999;
+            border-bottom: 2px solid var(--border-line);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
 
-    .date {
-      text-align: right;
-      font-size: 14px;
-      margin-bottom: 20px;
-      color: #5f6b76;
-      font-weight: 600;
-    }
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
 
-    .letter p {
-      margin-bottom: 22px;
-      text-align: justify;
-      color: #2b2b2b;
-    }
+        header img {
+            width: 55px;
+        }
 
-    .home-btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #740A03;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      letter-spacing: 1px;
-      padding: 10px 18px;
-      border-radius: 6px;
-      margin-bottom: 25px;
-      font-weight: 600;
-    }
-  </style>
+        nav {
+            display: flex;
+            gap: 4rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        main {
+            padding-top: 100px;
+            padding: 4rem 10%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-box {
+            background: white;
+            width: 100%;
+            padding: 70px 80px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 2px solid var(--border-line);
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .sidebar {
+            flex: 1;
+            border-right: 2px solid var(--border-line);
+            padding-right: 30px;
+        }
+
+        .sidebar h1 {
+            font-weight: 800;
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin: 0;
+            color: var(--primary-red);
+        }
+
+        .name {
+            margin-top: 12px;
+            font-size: 15px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .letter {
+            flex: 3;
+            padding-left: 40px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .date {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: var(--muted-text);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .letter p {
+            margin-bottom: 22px;
+            text-align: justify;
+            color: var(--text-dark);
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--text-dark);
+            transition: 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
+        footer {
+            background-color: #DCDCD5;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-dark);
+            font-size: 1.4rem;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-red);
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <div class="header-container">
+            <a href="images/blacklogo.png" target="_blank">
+                <img src="images/blacklogo.png" alt="mylogo">
+            </a>
+            <nav>
+                <a href="index.html#top">Home</a>
+                <a href="blog1.html">Blog 1</a>
+                <a href="blog2.html">Blog 2</a>
+                <a href="blog3.html">Blog 3</a>
+            </nav>
+        </div>
+    </header>
 
-  <div class="container">
-    <aside class="sidebar">
-      <h1>I May Be Unsure,<br>But I'm Not Giving Up</h1>
-      <div class="name">By: Cyril Libuton</div>
-    </aside>
+    <main>
+        <div class="content-wrapper">
+            <section class="content-box">
+                <div class="container">
+                    <aside class="sidebar">
+                        <h1>I May Be Unsure,<br>But I'm Not Giving Up</h1>
+                        <div class="name">By: Cyril Libuton</div>
+                    </aside>
 
-    <section class="letter">
-      <div class="date">01/27/2026</div>
+                    <section class="letter">
+                        <div class="date">01/27/2026</div>
 
-      <p>
-        I used to genuinely love programming, spending hours learning and dreaming of my future. I loved the thought of developing into a proficient programmer who could produce and comprehend more with each line of code. I still like programming, but not as much as I used to. I'm not sure whether this is the career path I want to take, but I'm still optimistic that as long as I keep learning and developing, the passion will eventually come back knowing that it used to be my dream. That was my dream. Well, it used to be.
-      </p>
+                        <p>
+                            I used to genuinely love programming, spending hours learning and dreaming of my future. I loved the thought of developing into a proficient programmer who could produce and comprehend more with each line of code. I still like programming, but not as much as I used to. I'm not sure whether this is the career path I want to take, but I'm still optimistic that as long as I keep learning and developing, the passion will eventually come back knowing that it used to be my dream. That was my dream. Well, it used to be.
+                        </p>
 
-      <p>
-        I first discovered my love for programming back in high school when I learned about HTML, robotics, and Arduino. Those early experiences sparked a curiosity in me, and I found myself experimenting with code and gadgets just for the joy of it. That excitement eventually led me to pursue the ICT strand in senior high school, where I could explore technology more deeply. But even then, a small voice of uncertainty started creeping in. I brushed it off because a big part of me still genuinely enjoyed programming, and I told myself I could figure it out along the way.
-      </p>
+                        <p>
+                            I first discovered my love for programming back in high school when I learned about HTML, robotics, and Arduino. Those early experiences sparked a curiosity in me, and I found myself experimenting with code and gadgets just for the joy of it. That excitement eventually led me to pursue the ICT strand in senior high school, where I could explore technology more deeply. But even then, a small voice of uncertainty started creeping in. I brushed it off because a big part of me still genuinely enjoyed programming, and I told myself I could figure it out along the way.
+                        </p>
 
-      <p>
-        Everything shifted during my first year of college, when I was introduced to C++ and Java. I completely fumbled, which felt strange since I had coded with Java back in high school. Stepping into college made me realize that I didn’t feel entirely at home in this course. I knew I could keep learning, but my passion was fading, and that realization hit harder than I expected. Now, in my second year, that dream I once held so tightly feels like it’s slowly slipping away, and I’ve started to accept that I might not chase it as fiercely as before.
-      </p>
+                        <p>
+                            Everything shifted during my first year of college, when I was introduced to C++ and Java. I completely fumbled, which felt strange since I had coded with Java back in high school. Stepping into college made me realize that I didn't feel entirely at home in this course. I knew I could keep learning, but my passion was fading, and that realization hit harder than I expected. Now, in my second year, that dream I once held so tightly feels like it's slowly slipping away, and I've started to accept that I might not chase it as fiercely as before.
+                        </p>
 
-      <p>
-        Even so, I’m still hopeful. I’m learning to take things one day at a time, improving myself, and holding onto my very last spark, my passion for HTML and CSS, which I hope never fades. I want to finish what I’ve started, and after this course, I plan to explore other fields, continue learning new things, and maybe uncover a skill I didn’t know I had. I try to trust that it’s never too late to discover new potential, and I hold onto the hope that, little by little, I might regain the spark that once made me fall in love with programming.
-      </p>
-      <a href="index.html" class="home-btn">HOME</a>
-    </section>
-  </div>
+                        <p>
+                            Even so, I'm still hopeful. I'm learning to take things one day at a time, improving myself, and holding onto my very last spark, my passion for HTML and CSS, which I hope never fades. I want to finish what I've started, and after this course, I plan to explore other fields, continue learning new things, and maybe uncover a skill I didn't know I had. I try to trust that it's never too late to discover new potential, and I hold onto the hope that, little by little, I might regain the spark that once made me fall in love with programming.
+                        </p>
+                        
+                        <a href="#top" class="back-to-top">Back to Top</a>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </main>
 
+    <footer>
+        <div class="social-links">
+            <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <p>&copy; Cyril Libuton</p>
+    </footer>
 </body>
 </html>
-
