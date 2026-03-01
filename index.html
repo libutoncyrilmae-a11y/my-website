@@ -49,9 +49,14 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
         nav {
             display: flex;
-            justify-content: center;
             gap: 4rem;
         }
 
@@ -68,7 +73,7 @@
         }
 
         main {
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
         .hero {
@@ -155,17 +160,39 @@
             margin-bottom: 1.5rem;
         }
 
+        .about-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .about-btn {
+            background-color: #B2B09B;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+
+        .about-btn:hover {
+            background-color: var(--primary-red);
+        }
+
         .text-link {
             color: var(--text-dark);
             text-decoration: underline;
             font-weight: 600;
-            transition: 0.3s ease;
         }
 
         .text-link:hover {
             color: var(--primary-red);
         }
 
+        /* Projects Grid */
         .projects-grid {
             display: grid;
             gap: 30px;
@@ -200,22 +227,6 @@
             text-decoration: underline;
         }
 
-        .back-to-top {
-            display: inline-block;
-            margin-top: 2rem;
-            font-family: 'Playfair Display', serif;
-            font-size: 0.95rem;
-            text-decoration: none;
-            color: var(--text-dark);
-            border-bottom: 1px solid var(--text-dark);
-            transition: 0.3s ease;
-        }
-
-        .back-to-top:hover {
-            color: var(--primary-red);
-            border-color: var(--primary-red);
-        }
-
         footer {
             background-color: #DCDCD5;
             padding: 2rem 0;
@@ -233,70 +244,30 @@
         .social-links a {
             color: var(--text-dark);
             font-size: 1.4rem;
-            transition: 0.3s ease;
         }
 
         .social-links a:hover {
             color: var(--primary-red);
         }
-
-        
-        .about-buttons {
-            margin-top: 2rem; /*1 rem = 16px*/
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .about-btn {
-            background-color: #B2B09B;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s ease;
-            display: inline-block;
-        }
-
-        .about-btn:hover {
-            background-color: var(--primary-red);
-        }
-
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr;
-            }
-
-            .red-block {
-                display: none;
-            }
-
-            h1 {
-                font-size: 3rem;
-            }
-
-            header {
-                padding: 1rem 5%;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 
-
 <body>
+
 <header>
-    <nav>
-        <a href="#top">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="aboutme.html">Biography</a>
-        <a href="#projects">Projects</a>
-        <a href="#contacts">Contacts</a>
-    </nav>
+    <div class="header-container">
+        <a href="gallery.html" target="portfolioTab" rel="noopener">
+            <img src="images/blacklogo.png" alt="mylogo" width="60">
+        </a>
+
+        <nav>
+            <a href="#top">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="aboutme.html">Biography</a>
+            <a href="#projects">Projects</a>
+            <a href="#contacts">Contacts</a>
+        </nav>
+    </div>
 </header>
 
 <main class="hero">
@@ -312,7 +283,7 @@
     </div>
 </main>
 
-<!-- About Me Section -->    
+<!-- About Me Section -->
 <section id="about" class="section">
     <div class="section-content">
         <h2>About Me</h2>
@@ -336,8 +307,6 @@
           <a href="collage.html" class="about-btn">Dream Places To Visit</a>
           <a href="bucket.html" class="about-btn">My Bucket List</a>
         </div>
-        
-        <a href="#top" class="back-to-top">Back to Top</a>
     </div>
 </section>
 
@@ -359,42 +328,8 @@
                 <a href="blog3.html">View Project →</a>
             </div>
         </div>
-        <a href="#top" class="back-to-top">Back to Top</a>
     </div>
 </section>
-
-
-<!-- Contacts Section -->    
-<section id="contacts" class="section">
-    <div class="section-content">
-        <h2>Contacts</h2>
-        <p>
-            Email: 123cyrilmae@gmail.com <br>
-            Phone: 09184793447 <br>
-            Facebook:
-            <a href="https://web.facebook.com/cycy.1123" class="text-link">
-                Cyril Libuton
-            </a>
-        </p>
-        <a href="#top" class="back-to-top">Back to Top</a>
-    </div>
-</section>
-
-<footer>
-    <div class="social-links">
-        <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-    <p>&copy; Cyril Libuton</p>
-</footer>
 
 </body>
 </html>
-
-
-
-
-
-
