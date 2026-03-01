@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -20,14 +19,14 @@
             --muted-text: #555;
         }
 
-        *, *::before, *::after {
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -41,16 +40,27 @@
         header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             background-color: var(--bg-cream);
-            padding: 1.5rem 5%;
-            border-bottom: 2px solid var(--border-line);
+            padding: 1rem 5%;
             z-index: 999;
+            border-bottom: 2px solid var(--border-line);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        header img {
+            width: 55px;
         }
 
         nav {
             display: flex;
-            justify-content: center;
             gap: 4rem;
         }
 
@@ -59,15 +69,19 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
             color: var(--text-dark);
-            transition: color 0.3s ease;
+            transition: 0.3s ease;
         }
 
         nav a:hover {
             color: var(--primary-red);
         }
 
+        main {
+            padding-top: 100px;
+        }
+
         .section {
-            padding: 8rem 10% 6rem;
+            padding: 6rem 10%;
         }
 
         .section-content {
@@ -105,7 +119,6 @@
             margin-bottom: 1rem;
         }
 
-        /* ===== MOVIE CARD LAYOUT ===== */
         .movie-card {
             display: grid;
             grid-template-columns: 260px 1fr;
@@ -169,22 +182,20 @@
             border: 0;
         }
 
-        /* ===== Back to Top outside cards ===== */
-        .back-to-top-outside {
-            margin-top: 1.5rem;
-            text-align: left; /* align left */
-            font-weight: bold;
-        }
-
-        .back-to-top-outside a {
-            color: var(--primary-red);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .back-to-top-outside a:hover {
-            color: #ff0000; /* red hover effect */
-        }
+        .back-to-top {
+         display: inline-block;
+         margin-top: 2rem;
+         font-family: 'Playfair Display', serif;
+         font-size: 0.95rem;
+         text-decoration: none;
+         color: var(--text-dark);
+         border-bottom: 1px solid var(--text-dark);
+         transition: 0.3s ease;
+         }
+         .back-to-top:hover {
+         color: var(--primary-red);
+         border-color: var(--primary-red);
+         }
 
         footer {
             background-color: #DCDCD5;
@@ -203,7 +214,7 @@
         .social-links a {
             color: var(--text-dark);
             font-size: 1.4rem;
-            transition: color 0.3s ease;
+            transition: 0.3s ease;
         }
 
         .social-links a:hover {
@@ -213,147 +224,119 @@
         footer p {
             font-size: 0.9rem;
         }
-
-        /* ===== MOBILE ===== */
-        @media(max-width: 900px) {
-            .movie-card {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto auto;
-                grid-template-areas:
-                    "info"
-                    "poster"
-                    "trailer";
-                text-align: center;
-            }
-
-            .movie-poster {
-                max-height: 400px;
-            }
-
-            .trailer {
-                min-height: 250px;
-            }
-
-            .section {
-                padding: 8rem 5% 4rem;
-            }
-
-            .back-to-top-outside {
-                text-align: left;
-            }
-        }
     </style>
 </head>
 
 <body>
-
-<header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="mybeats.html">Beats</a>
-        <a href="myfilm.html">Movies</a>
-        <a href="myfilmtv.html">TV Shows</a>
-    </nav>
-</header>
-
-<section class="section">
-    <div class="section-content">
-        <h2>My Personal Movie Favorites</h2>
-        <p class="subtitle">Some of my all-time favorite films</p>
-
-        <div class="movies-grid">
-
-            <!-- Interstellar -->
-            <a href="https://en.wikipedia.org/wiki/Interstellar_%28film%29" class="movie-card">
-                <div class="movie-info">
-                    <h3>Interstellar</h3>
-                    <p>Genre: Sci-Fi / Adventure</p>
-                    <p>Year: 2014</p>
-                    <p>An epic exploration of space and time, with love and survival at its core. One of the best movies I've ever watched. If you enjoy movies that involves outer space and thrills, this movie is for you.</p>
-                </div>
-                <img src="images/films/interstellar.jpg" alt="Interstellar Poster" class="movie-poster">
-                <div class="trailer">
-                    <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" allowfullscreen></iframe>
-                </div>
+    <header>
+        <div class="header-container">
+            <a href="images/blacklogo.png" target="_blank">
+                <img src="images/blacklogo.png" alt="mylogo">
             </a>
-
-            <!-- The Karate Kid -->
-            <a href="https://en.wikipedia.org/wiki/The_Karate_Kid_(2010_film)" class="movie-card">
-                <div class="movie-info">
-                    <h3>The Karate Kid</h3>
-                    <p>Genre: Action / Drama</p>
-                    <p>Year: 2010</p>
-                    <p>Jaden Smith learns martial arts to overcome challenges and find inner strength. My childhood fave as well, I grew up watching this. It's very inspiring and motivational.</p>
-                </div>
-                <img src="images/films/thekaratekid.jpg" alt="The Karate Kid Poster" class="movie-poster">
-                <div class="trailer">
-                    <iframe src="https://www.youtube.com/embed/XY8amUImEu0" allowfullscreen></iframe>
-                </div>
-            </a>
-
-            <!-- Coraline -->
-            <a href="https://en.wikipedia.org/wiki/Coraline_(film)" class="movie-card">
-                <div class="movie-info">
-                    <h3>Coraline</h3>
-                    <p>Genre: Fantasy / Animation</p>
-                    <p>Year: 2009</p>
-                    <p>A young girl discovers a mysterious parallel world with dark secrets. I grew up watching this and I still do up to this day, it's both fun and mysterious.</p>
-                </div>
-                <img src="images/films/coraline.jpg" alt="Coraline Poster" class="movie-poster">
-                <div class="trailer">
-                    <iframe src="https://www.youtube.com/embed/m9bOpeuvNwY" allowfullscreen></iframe>
-                </div>
-            </a>
-
-            <!-- Now You See Me -->
-            <a href="https://en.wikipedia.org/wiki/Now_You_See_Me_(film)" class="movie-card">
-                <div class="movie-info">
-                    <h3>Now You See Me</h3>
-                    <p>Genre: Mystery / Thriller</p>
-                    <p>Year: 2013</p>
-                    <p>A team of magicians pulls off daring heists while staying ahead of the law. One of the best movies out there to watch with your family.</p>
-                </div>
-                <img src="images/films/nowyouseeme.jpg" alt="Now You See Me Poster" class="movie-poster">
-                <div class="trailer">
-                    <iframe src="https://www.youtube.com/embed/C2NWGAqZhF4" allowfullscreen></iframe>
-                </div>
-            </a>
-
-            <!-- Oppenheimer -->
-            <a href="https://en.wikipedia.org/wiki/Oppenheimer_(film)" class="movie-card">
-                <div class="movie-info">
-                    <h3>Oppenheimer</h3>
-                    <p>Genre: Biography / Drama</p>
-                    <p>Year: 2023</p>
-                    <p>The story of J. Robert Oppenheimer and the moral dilemmas he faced while developing the atomic bomb. A very educational and interesting movie.</p>
-                </div>
-                <img src="images/films/oppeneimer.jpg" alt="Oppenheimer Poster" class="movie-poster">
-                <div class="trailer">
-                    <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
-                </div>
-            </a>
-
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="mybeats.html">Beats</a>
+                <a href="myfilm.html">Movies</a>
+                <a href="myfilmtv.html">TV Shows</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Back to Top Text -->
-        <div class="back-to-top-outside">
-            <a href="#top">Back to Top</a>
+    <main>
+        <section class="section">
+            <div class="section-content">
+                <h2>My Personal Movie Favorites</h2>
+                <p class="subtitle">Some of my all-time favorite films</p>
+
+                <div class="movies-grid">
+
+                    <!-- Interstellar -->
+                    <a href="https://en.wikipedia.org/wiki/Interstellar_%28film%29" class="movie-card">
+                        <div class="movie-info">
+                            <h3>Interstellar</h3>
+                            <p>Genre: Sci-Fi / Adventure</p>
+                            <p>Year: 2014</p>
+                            <p>An epic exploration of space and time, with love and survival at its core. One of the best movies I've ever watched. If you enjoy movies that involves outer space and thrills, this movie is for you.</p>
+                        </div>
+                        <img src="images/films/interstellar.jpg" alt="Interstellar Poster" class="movie-poster">
+                        <div class="trailer">
+                            <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" allowfullscreen></iframe>
+                        </div>
+                    </a>
+
+                    <!-- The Karate Kid -->
+                    <a href="https://en.wikipedia.org/wiki/The_Karate_Kid_(2010_film)" class="movie-card">
+                        <div class="movie-info">
+                            <h3>The Karate Kid</h3>
+                            <p>Genre: Action / Drama</p>
+                            <p>Year: 2010</p>
+                            <p>Jaden Smith learns martial arts to overcome challenges and find inner strength. My childhood fave as well, I grew up watching this. It's very inspiring and motivational.</p>
+                        </div>
+                        <img src="images/films/thekaratekid.jpg" alt="The Karate Kid Poster" class="movie-poster">
+                        <div class="trailer">
+                            <iframe src="https://www.youtube.com/embed/XY8amUImEu0" allowfullscreen></iframe>
+                        </div>
+                    </a>
+
+                    <!-- Coraline -->
+                    <a href="https://en.wikipedia.org/wiki/Coraline_(film)" class="movie-card">
+                        <div class="movie-info">
+                            <h3>Coraline</h3>
+                            <p>Genre: Fantasy / Animation</p>
+                            <p>Year: 2009</p>
+                            <p>A young girl discovers a mysterious parallel world with dark secrets. I grew up watching this and I still do up to this day, it's both fun and mysterious.</p>
+                        </div>
+                        <img src="images/films/coraline.jpg" alt="Coraline Poster" class="movie-poster">
+                        <div class="trailer">
+                            <iframe src="https://www.youtube.com/embed/m9bOpeuvNwY" allowfullscreen></iframe>
+                        </div>
+                    </a>
+
+                    <!-- Now You See Me -->
+                    <a href="https://en.wikipedia.org/wiki/Now_You_See_Me_(film)" class="movie-card">
+                        <div class="movie-info">
+                            <h3>Now You See Me</h3>
+                            <p>Genre: Mystery / Thriller</p>
+                            <p>Year: 2013</p>
+                            <p>A team of magicians pulls off daring heists while staying ahead of the law. One of the best movies out there to watch with your family.</p>
+                        </div>
+                        <img src="images/films/nowyouseeme.jpg" alt="Now You See Me Poster" class="movie-poster">
+                        <div class="trailer">
+                            <iframe src="https://www.youtube.com/embed/C2NWGAqZhF4" allowfullscreen></iframe>
+                        </div>
+                    </a>
+
+                    <!-- Oppenheimer -->
+                    <a href="https://en.wikipedia.org/wiki/Oppenheimer_(film)" class="movie-card">
+                        <div class="movie-info">
+                            <h3>Oppenheimer</h3>
+                            <p>Genre: Biography / Drama</p>
+                            <p>Year: 2023</p>
+                            <p>The story of J. Robert Oppenheimer and the moral dilemmas he faced while developing the atomic bomb. A very educational and interesting movie.</p>
+                        </div>
+                        <img src="images/films/oppeneimer.jpg" alt="Oppenheimer Poster" class="movie-poster">
+                        <div class="trailer">
+                            <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
+                        </div>
+                    </a>
+
+                </div>
+
+                <a href="#top" class="back-to-top">Back to Top</a>
+
+                <div class="divider"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
         </div>
-
-        <div class="divider"></div>
-    </div>
-</section>
-
-<footer>
-    <div class="social-links">
-        <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-    <p>&copy; Cyril Libuton</p>
-</footer>
-
+        <p>&copy; Cyril Libuton</p>
+    </footer>
 </body>
 </html>
