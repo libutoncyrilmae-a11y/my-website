@@ -40,16 +40,27 @@
         header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             background-color: var(--bg-cream);
-            padding: 1.5rem 5%;
-            border-bottom: 2px solid var(--border-line);
+            padding: 1rem 5%;
             z-index: 999;
+            border-bottom: 2px solid var(--border-line);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        header img {
+            width: 55px;
         }
 
         nav {
             display: flex;
-            justify-content: center;
             gap: 4rem;
         }
 
@@ -58,6 +69,15 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
             color: var(--text-dark);
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        main {
+            padding-top: 100px;
         }
 
         .section {
@@ -162,6 +182,11 @@
         .social-links a {
             color: var(--text-dark);
             font-size: 1.4rem;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-red);
         }
 
         footer p {
@@ -184,67 +209,73 @@
 
 <body>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="mybeats.html">Beats</a>
-            <a href="myfilm.html">Movies</a>
-            <a href="myfilmtv.html">TV Shows</a>
-        </nav>
+        <div class="header-container">
+            <a href="images/blacklogo.png" target="_blank">
+                <img src="images/blacklogo.png" alt="mylogo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="mybeats.html">Beats</a>
+                <a href="myfilm.html">Movies</a>
+                <a href="myfilmtv.html">TV Shows</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="section">
-        <div class="section-content">
-            <h2>My Beats</h2>
-            <p class="subtitle">My personal favorites</p>
+    <main>
+        <section class="section">
+            <div class="section-content">
+                <h2>My Beats</h2>
+                <p class="subtitle">My personal favorites</p>
 
-            <div class="beats-grid">
-                <a href="https://open.spotify.com/album/79dL7FLiJFOO0EoehUHQBv" class="beat-card">
-                    <img src="images/beats/currents.png" class="album-image">
-                    <div class="artist-name">Tame Impala</div>
-                    <div class="album-name">Currents</div>
-                    <div class="review-snippet">It feels like being swept into a colorful wave of emotion that’s overwhelming yet strangely empowering.</div>
-                </a>
+                <div class="beats-grid">
+                    <a href="https://open.spotify.com/album/79dL7FLiJFOO0EoehUHQBv" class="beat-card">
+                        <img src="images/beats/currents.png" class="album-image">
+                        <div class="artist-name">Tame Impala</div>
+                        <div class="album-name">Currents</div>
+                        <div class="review-snippet">It feels like being swept into a colorful wave of emotion that's overwhelming yet strangely empowering.</div>
+                    </a>
 
-                <a href="https://open.spotify.com/album/42cH7mrkfljkqkxA2Ip9Xq" class="beat-card">
-                    <img src="images/beats/bethecowboy.jpg" class="album-image">
-                    <div class="artist-name">Mitski</div>
-                    <div class="album-name">Be The Cowboy</div>
-                    <div class="review-snippet">Composed and dramatic, but you can feel the vulnerability underneath.</div>
-                </a>
+                    <a href="https://open.spotify.com/album/42cH7mrkfljkqkxA2Ip9Xq" class="beat-card">
+                        <img src="images/beats/bethecowboy.jpg" class="album-image">
+                        <div class="artist-name">Mitski</div>
+                        <div class="album-name">Be The Cowboy</div>
+                        <div class="review-snippet">Composed and dramatic, but you can feel the vulnerability underneath.</div>
+                    </a>
 
-                <a href="https://open.spotify.com/album/78bpIziExqiI9qztvNFlQu" class="beat-card">
-                    <img src="images/beats/am.png" class="album-image">
-                    <div class="artist-name">Arctic Monkeys</div>
-                    <div class="album-name">AM</div>
-                    <div class="review-snippet">Simple and bold, with a cool, late-night confidence.</div>
-                </a>
+                    <a href="https://open.spotify.com/album/78bpIziExqiI9qztvNFlQu" class="beat-card">
+                        <img src="images/beats/am.png" class="album-image">
+                        <div class="artist-name">Arctic Monkeys</div>
+                        <div class="album-name">AM</div>
+                        <div class="review-snippet">Simple and bold, with a cool, late-night confidence.</div>
+                    </a>
 
-                <a href="https://open.spotify.com/album/31qVWUdRrlb8thMvts0yYL" class="beat-card">
-                    <img src="images/beats/theslowrush.png" class="album-image">
-                    <div class="artist-name">Tame Impala</div>
-                    <div class="album-name">The Slow Rush</div>
-                    <div class="review-snippet">It captures the quiet, beautiful loneliness of time slowly slipping away.</div>
-                </a>
+                    <a href="https://open.spotify.com/album/31qVWUdRrlb8thMvts0yYL" class="beat-card">
+                        <img src="images/beats/theslowrush.png" class="album-image">
+                        <div class="artist-name">Tame Impala</div>
+                        <div class="album-name">The Slow Rush</div>
+                        <div class="review-snippet">It captures the quiet, beautiful loneliness of time slowly slipping away.</div>
+                    </a>
 
-                <a href="https://open.spotify.com/album/6lbrHERXve89hrxuCpsJOg" class="beat-card">
-                    <img src="images/beats/portals.png" class="album-image">
-                    <div class="artist-name">Melanie Martinez</div>
-                    <div class="album-name">Portals</div>
-                    <div class="review-snippet">A strange, magical rebirth that feels freeing and chaotic.</div>
-                </a>
+                    <a href="https://open.spotify.com/album/6lbrHERXve89hrxuCpsJOg" class="beat-card">
+                        <img src="images/beats/portals.png" class="album-image">
+                        <div class="artist-name">Melanie Martinez</div>
+                        <div class="album-name">Portals</div>
+                        <div class="review-snippet">A strange, magical rebirth that feels freeing and chaotic.</div>
+                    </a>
 
-                <a href="https://open.spotify.com/playlist/6J9e5CSe67b2uuhlmY539p" class="beat-card">
-                    <img src="images/beats/crybaby.png" class="album-image">
-                    <div class="artist-name">Melanie Martinez</div>
-                    <div class="album-name">Cry Baby</div>
-                    <div class="review-snippet">Soft and pastel on the surface, but deeply honest about pain underneath.</div>
-                </a>
+                    <a href="https://open.spotify.com/playlist/6J9e5CSe67b2uuhlmY539p" class="beat-card">
+                        <img src="images/beats/crybaby.png" class="album-image">
+                        <div class="artist-name">Melanie Martinez</div>
+                        <div class="album-name">Cry Baby</div>
+                        <div class="review-snippet">Soft and pastel on the surface, but deeply honest about pain underneath.</div>
+                    </a>
+                </div>
+
+                <div class="divider"></div>
             </div>
-
-            <div class="divider"></div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="social-links">
@@ -257,4 +288,3 @@
     </footer>
 </body>
 </html>
-
