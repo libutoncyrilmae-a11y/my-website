@@ -1,378 +1,332 @@
 <!DOCTYPE html>
 <html lang="en" id="top">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cy's Gallery</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-:root {
-    --bg-cream: #FDFCF5;
-    --primary-red: #9E4244;
-    --text-dark: #2c2c2c;
-    --border-line: #000;
-    --muted-text: #666;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: var(--bg-cream);
-    color: var(--text-dark);
-    border-top: 20px solid var(--primary-red);
-    min-height: 100vh;
-}
-
-header {
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    background-color: var(--bg-cream);
-    padding: 1rem 5%;
-    z-index: 999;
-    border-bottom: 2px solid var(--border-line);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-header img {
-    width: 60px;
-}
-
-nav {
-    display:flex;
-    gap:4rem;
-}
-
-nav a {
-    text-decoration:none;
-    font-family: 'Playfair Display', serif;
-    font-size:1.2rem;
-    color: var(--text-dark);
-    transition: 0.3s ease;
-}
-
-nav a:hover { color: var(--primary-red); }
-
-main { padding-top: 120px; }
-
-.section { padding: 8rem 5% 6rem; }
-
-.section-content { max-width: 1200px; margin:auto; }
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size:2.8rem;
-    margin-bottom:2rem;
-    text-align:center;
-    color: var(--primary-red);
-}
-
-.collection-nav {
-    text-align: center;
-    margin: 1.5rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-}
-
-.collection-nav a {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-red);
-    color: white;
-    border-radius: 5px;
-    font-family: 'Playfair Display', serif;
-    transition: background-color 0.3s;
-}
-
-.collection-nav a:hover { background-color: #7a2f30; }
-
-.gallery-collection {
-    margin-bottom:3rem;
-    padding:2rem 0;
-    border-bottom: 2px solid var(--border-line);
-}
-
-.collection-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.collection-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-red);
-}
-
-.back-to-top { margin-top: 1rem; }
-
-.back-to-top a {
-    text-decoration: none;
-    color: var(--primary-red);
-    font-weight: bold;
-}
-
-.back-to-top a:hover { text-decoration: underline; }
-
-.gallery-row {
-    display:flex;
-    gap:20px;
-    margin-bottom:20px;
-    flex-wrap: wrap;
-}
-
-.gallery-row figure {
-    margin:0;
-    border-radius:10px;
-    overflow:hidden;
-    position: relative;
-}
-
-.figure-rect { flex:2; aspect-ratio: 16 / 9; }
-.figure-square { flex:1; aspect-ratio: 1 / 1; }
-
-.gallery-row img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-
-.gallery-row figcaption {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:10px;
-    background:rgba(0,0,0,0.6);
-    color:white;
-    text-align:center;
-    opacity:0;
-    transition:0.3s;
-}
-
-.gallery-row figure:hover figcaption { opacity:1; }
-
-@media(max-width:800px){
-    .gallery-row { flex-direction: column; }
-}
-
-footer {
-    background-color:#DCDCD5;
-    padding:2rem 0;
-    text-align:center;
-    margin-top:4rem;
-}
-
-.social-links {
-    display:flex;
-    justify-content:center;
-    gap:1.5rem;
-    margin-bottom:1rem;
-}
-
-.social-links a {
-    color:var(--text-dark);
-    font-size:1.4rem;
-}
-
-.social-links a:hover { color:var(--primary-red); }
-</style>
-</head>
-
-<body>
-
-<header>
-    <div class="header-container">
-        <a href="index.html">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cy's Gallery</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <style>
+         :root {
+         --bg-cream: #FDFCF5;
+         --primary-red: #9E4244;
+         --text-dark: #2c2c2c;
+         --border-line: #000;
+         --muted-text: #666;
+         }
+         * { margin:0; padding:0; box-sizing:border-box; }
+         html { scroll-behavior: smooth; }
+         body {
+         font-family: 'Lato', sans-serif;
+         background-color: var(--bg-cream);
+         color: var(--text-dark);
+         border-top: 20px solid var(--primary-red);
+         min-height: 100vh;
+         }
+         header {
+         position: fixed;
+         top: 0; left: 0; width: 100%;
+         background-color: var(--bg-cream);
+         padding: 1rem 5%;
+         z-index: 999;
+         border-bottom: 2px solid var(--border-line);
+         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+         }
+         .header-container {
+         display: flex;
+         align-items: center;
+         gap: 2.5rem;
+         }
+         header img {
+         width: 55px;
+         }
+         nav {
+         display:flex;
+         gap:4rem;
+         }
+         nav a {
+         text-decoration:none;
+         font-family: 'Playfair Display', serif;
+         font-size:1.2rem;
+         color: var(--text-dark);
+         transition: 0.3s ease;
+         }
+         nav a:hover { color: var(--primary-red); }
+         main { padding-top: 100px; }
+         .section { padding: 8rem 5% 6rem; }
+         .section-content { max-width: 1200px; margin:auto; }
+         h2 {
+         font-family: 'Playfair Display', serif;
+         font-size:2.8rem;
+         margin-bottom:2rem;
+         text-align:center;
+         color: var(--primary-red);
+         }
+         .collection-nav {
+         text-align: center;
+         margin: 1.5rem 0;
+         display: flex;
+         justify-content: center;
+         gap: 1.2rem;
+         flex-wrap: wrap;
+         }
+         .collection-nav a {
+         text-decoration: none;
+         padding: 0.5rem 1rem;
+         background-color: var(--primary-red);
+         color: white;
+         border-radius: 5px;
+         font-family: 'Playfair Display', serif;
+         transition: background-color 0.3s;
+         }
+         .collection-nav a:hover { background-color: #7a2f30; }
+         .gallery-collection {
+         margin-bottom:3rem;
+         padding:2rem 0;
+         border-bottom: 2px solid var(--border-line);
+         }
+         .collection-header {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         gap: 1.5rem;
+         margin-bottom: 1.5rem;
+         }
+         .collection-title {
+         font-family: 'Playfair Display', serif;
+         font-size: 1.5rem;
+         font-weight: bold;
+         color: var(--primary-red);
+         }
+         .back-to-top { margin-top: 1rem; }
+         .back-to-top a {
+         text-decoration: none;
+         color: var(--primary-red);
+         font-weight: bold;
+         }
+         .back-to-top a:hover { text-decoration: underline; }
+         .gallery-row {
+         display:flex;
+         gap:20px;
+         margin-bottom:20px;
+         flex-wrap: wrap;
+         }
+         .gallery-row figure {
+         margin:0;
+         border-radius:10px;
+         overflow:hidden;
+         position: relative;
+         }
+         .figure-rect { flex:2; aspect-ratio: 16 / 9; }
+         .figure-square { flex:1; aspect-ratio: 1 / 1; }
+         .gallery-row img {
+         width:100%;
+         height:100%;
+         object-fit:cover;
+         display:block;
+         }
+         .gallery-row figcaption {
+         position:absolute;
+         bottom:0;
+         width:100%;
+         padding:10px;
+         background:rgba(0,0,0,0.6);
+         color:white;
+         text-align:center;
+         opacity:0;
+         transition:0.3s;
+         }
+         .gallery-row figure:hover figcaption { opacity:1; }
+         footer {
+         background-color:#DCDCD5;
+         padding:2rem 0;
+         text-align:center;
+         margin-top:4rem;
+         }
+         .social-links {
+         display:flex;
+         justify-content:center;
+         gap:1.5rem;
+         margin-bottom:1rem;
+         }
+         .social-links a {
+         color:var(--text-dark);
+         font-size:1.4rem;
+         }
+         .social-links a:hover { color:var(--primary-red); }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div class="header-container">
+            <a href="index.html">
             <img src="images/blacklogo.png" alt="mylogo">
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="aboutme.html">Biography</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="#contacts">Contacts</a>
-        </nav>
-    </div>
-</header>
-
-<section class="section">
-<div class="section-content">
-<h2>My Gallery</h2>
-
-<div class="collection-nav">
-    <a href="#friends">Friends</a>
-    <a href="#family">Family</a>
-    <a href="#hobby">My Hobby</a>
-    <a href="#lover">My Lover</a>
-</div>
-
-<!-- Friends Collection -->
-<div id="friends" class="gallery-collection">
-<div class="collection-header"><div class="collection-title">Friends</div></div>
-<div class="gallery-row">
-    <figure class="figure-rect">
-        <a href="images/gallery/friend1.jpeg" target="_blank"><img src="images/gallery/friend1.jpeg" alt="My Bestfriend Zea"></a>
-        <figcaption>My Bestfriend Zea</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/friend2.jpeg" target="_blank"><img src="images/gallery/friend2.jpeg" alt="My Bestfriend Trayce"></a>
-        <figcaption>My Bestfriend Trayce</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/friend3.jpeg" target="_blank"><img src="images/gallery/friend3.jpeg" alt="Double Date w/ Zea"></a>
-        <figcaption>Double Date w/ Zea</figcaption>
-    </figure>
-</div>
-<div class="gallery-row">
-    <figure class="figure-square">
-        <a href="images/gallery/friend4.jpeg" target="_blank"><img src="images/gallery/friend4.jpeg" alt="Lunch w/ Zea"></a>
-        <figcaption>Lunch w/ Zea</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/friend5.jpeg" target="_blank"><img src="images/gallery/friend5.jpeg" alt="UE friends"></a>
-        <figcaption>UE friends</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/friend6.jpeg" target="_blank"><img src="images/gallery/friend6.jpeg" alt="Childhood friends"></a>
-        <figcaption>Childhood friends</figcaption>
-    </figure>
-</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-</div>
-
-<!-- Family Collection -->
-<div id="family" class="gallery-collection">
-<div class="collection-header"><div class="collection-title">Family</div></div>
-<div class="gallery-row">
-    <figure class="figure-rect">
-        <a href="images/gallery/family1.jpeg" target="_blank"><img src="images/gallery/family1.jpeg" alt="Family 1"></a>
-        <figcaption>Father side</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/family2.jpeg" target="_blank"><img src="images/gallery/family2.jpeg" alt="Family 2"></a>
-        <figcaption>Me and my niece</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/family3.jpeg" target="_blank"><img src="images/gallery/family3.jpeg" alt="Family 3"></a>
-        <figcaption>Mother side</figcaption>
-    </figure>
-</div>
-<div class="gallery-row">
-    <figure class="figure-square">
-        <a href="images/gallery/family4.jpeg" target="_blank"><img src="images/gallery/family4.jpeg" alt="Family 4"></a>
-        <figcaption>w/ my mom</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/family5.jpeg" target="_blank"><img src="images/gallery/family5.jpeg" alt="Family 5"></a>
-        <figcaption>Father side</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/family6.jpeg" target="_blank"><img src="images/gallery/family6.jpeg" alt="Family 6"></a>
-        <figcaption>My mom and her lover</figcaption>
-    </figure>
-</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-</div>
-
-<!-- Hobby Collection -->
-<div id="hobby" class="gallery-collection">
-<div class="collection-header"><div class="collection-title">My Hobby</div></div>
-<div class="gallery-row">
-    <figure class="figure-rect">
-        <a href="images/gallery/hobby1.jpeg" target="_blank"><img src="images/gallery/hobby1.jpeg" alt="Hobby 1"></a>
-        <figcaption>Feb 2026</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/hobby2.jpeg" target="_blank"><img src="images/gallery/hobby2.jpeg" alt="Hobby 2"></a>
-        <figcaption>Feb 2025</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/hobby3.jpeg" target="_blank"><img src="images/gallery/hobby3.jpeg" alt="Hobby 3"></a>
-        <figcaption>Feb 2025</figcaption>
-    </figure>
-</div>
-<div class="gallery-row">
-    <figure class="figure-square">
-        <a href="images/gallery/hobby4.jpeg" target="_blank"><img src="images/gallery/hobby4.jpeg" alt="Hobby 4"></a>
-        <figcaption>Mar 2025</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/hobby5.jpeg" target="_blank"><img src="images/gallery/hobby5.jpeg" alt="Hobby 5"></a>
-        <figcaption>Jun 2025</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/hobby6.jpeg" target="_blank"><img src="images/gallery/hobby6.jpeg" alt="Hobby 6"></a>
-        <figcaption>Jul 2025</figcaption>
-    </figure>
-</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-</div>
-
-<!-- Lover Collection -->
-<div id="lover" class="gallery-collection">
-<div class="collection-header"><div class="collection-title">My Lover</div></div>
-<div class="gallery-row">
-    <figure class="figure-rect">
-        <a href="images/gallery/lover1.jpeg" target="_blank"><img src="images/gallery/lover1.jpeg" alt="Lover 1"></a>
-        <figcaption>Antipolo date</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/lover2.jpeg" target="_blank"><img src="images/gallery/lover2.jpeg" alt="Lover 2"></a>
-        <figcaption>Photobooth date</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/lover3.jpeg" target="_blank"><img src="images/gallery/lover3.jpeg" alt="Lover 3"></a>
-        <figcaption>Antipolo date</figcaption>
-    </figure>
-</div>
-<div class="gallery-row">
-    <figure class="figure-square">
-        <a href="images/gallery/lover4.jpeg" target="_blank"><img src="images/gallery/lover4.jpeg" alt="Lover 4"></a>
-        <figcaption>Cinema date</figcaption>
-    </figure>
-    <figure class="figure-rect">
-        <a href="images/gallery/lover5.jpeg" target="_blank"><img src="images/gallery/lover5.jpeg" alt="Lover 5"></a>
-        <figcaption>Photobooth date</figcaption>
-    </figure>
-    <figure class="figure-square">
-        <a href="images/gallery/lover6.jpeg" target="_blank"><img src="images/gallery/lover6.jpeg" alt="Lover 6"></a>
-        <figcaption>Cafe date</figcaption>
-    </figure>
-</div>
-<div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
-</div>
-
-</div>
-</section>
-
-<footer id="contacts">
-<div class="social-links">
-    <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
-    <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-</div>
-<p>&copy; Cyril Libuton</p>
-</footer>
-
-</body>
+            </a>
+            <nav>
+               <a href="index.html">Home</a>
+               <a href="aboutme.html">Biography</a>
+               <a href="gallery.html">Gallery</a>
+               <a href="#contacts">Contacts</a>
+            </nav>
+         </div>
+      </header>
+      <section class="section">
+         <div class="section-content">
+            <h2>My Gallery</h2>
+            <div class="collection-nav">
+               <a href="#friends">Friends</a>
+               <a href="#family">Family</a>
+               <a href="#hobby">My Hobby</a>
+               <a href="#lover">My Lover</a>
+            </div>
+            <div id="friends" class="gallery-collection">
+               <div class="collection-header">
+                  <div class="collection-title">Friends</div>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-rect">
+                     <a href="images/gallery/friend1.jpeg" target="_blank"><img src="images/gallery/friend1.jpeg" alt="My Bestfriend Zea"></a>
+                     <figcaption>My Bestfriend Zea</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/friend2.jpeg" target="_blank"><img src="images/gallery/friend2.jpeg" alt="My Bestfriend Trayce"></a>
+                     <figcaption>My Bestfriend Trayce</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/friend3.jpeg" target="_blank"><img src="images/gallery/friend3.jpeg" alt="Double Date w/ Zea"></a>
+                     <figcaption>Double Date w/ Zea</figcaption>
+                  </figure>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-square">
+                     <a href="images/gallery/friend4.jpeg" target="_blank"><img src="images/gallery/friend4.jpeg" alt="Lunch w/ Zea"></a>
+                     <figcaption>Lunch w/ Zea</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/friend5.jpeg" target="_blank"><img src="images/gallery/friend5.jpeg" alt="UE friends"></a>
+                     <figcaption>UE friends</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/friend6.jpeg" target="_blank"><img src="images/gallery/friend6.jpeg" alt="Childhood friends"></a>
+                     <figcaption>Childhood friends</figcaption>
+                  </figure>
+               </div>
+               <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+            </div>
+            <div id="family" class="gallery-collection">
+               <div class="collection-header">
+                  <div class="collection-title">Family</div>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-rect">
+                     <a href="images/gallery/family1.jpeg" target="_blank"><img src="images/gallery/family1.jpeg" alt="Family 1"></a>
+                     <figcaption>Father side</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/family2.jpeg" target="_blank"><img src="images/gallery/family2.jpeg" alt="Family 2"></a>
+                     <figcaption>Me and my niece</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/family3.jpeg" target="_blank"><img src="images/gallery/family3.jpeg" alt="Family 3"></a>
+                     <figcaption>Mother side</figcaption>
+                  </figure>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-square">
+                     <a href="images/gallery/family4.jpeg" target="_blank"><img src="images/gallery/family4.jpeg" alt="Family 4"></a>
+                     <figcaption>w/ my mom</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/family5.jpeg" target="_blank"><img src="images/gallery/family5.jpeg" alt="Family 5"></a>
+                     <figcaption>Father side</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/family6.jpeg" target="_blank"><img src="images/gallery/family6.jpeg" alt="Family 6"></a>
+                     <figcaption>My mom and her lover</figcaption>
+                  </figure>
+               </div>
+               <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+            </div>
+            <div id="hobby" class="gallery-collection">
+               <div class="collection-header">
+                  <div class="collection-title">My Hobby</div>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-rect">
+                     <a href="images/gallery/hobby1.jpeg" target="_blank"><img src="images/gallery/hobby1.jpeg" alt="Hobby 1"></a>
+                     <figcaption>Feb 2026</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/hobby2.jpeg" target="_blank"><img src="images/gallery/hobby2.jpeg" alt="Hobby 2"></a>
+                     <figcaption>Feb 2025</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/hobby3.jpeg" target="_blank"><img src="images/gallery/hobby3.jpeg" alt="Hobby 3"></a>
+                     <figcaption>Feb 2025</figcaption>
+                  </figure>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-square">
+                     <a href="images/gallery/hobby4.jpeg" target="_blank"><img src="images/gallery/hobby4.jpeg" alt="Hobby 4"></a>
+                     <figcaption>Mar 2025</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/hobby5.jpeg" target="_blank"><img src="images/gallery/hobby5.jpeg" alt="Hobby 5"></a>
+                     <figcaption>Jun 2025</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/hobby6.jpeg" target="_blank"><img src="images/gallery/hobby6.jpeg" alt="Hobby 6"></a>
+                     <figcaption>Jul 2025</figcaption>
+                  </figure>
+               </div>
+               <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+            </div>
+            <div id="lover" class="gallery-collection">
+               <div class="collection-header">
+                  <div class="collection-title">My Lover</div>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-rect">
+                     <a href="images/gallery/lover1.jpeg" target="_blank"><img src="images/gallery/lover1.jpeg" alt="Lover 1"></a>
+                     <figcaption>Antipolo date</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/lover2.jpeg" target="_blank"><img src="images/gallery/lover2.jpeg" alt="Lover 2"></a>
+                     <figcaption>Photobooth date</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/lover3.jpeg" target="_blank"><img src="images/gallery/lover3.jpeg" alt="Lover 3"></a>
+                     <figcaption>Antipolo date</figcaption>
+                  </figure>
+               </div>
+               <div class="gallery-row">
+                  <figure class="figure-square">
+                     <a href="images/gallery/lover4.jpeg" target="_blank"><img src="images/gallery/lover4.jpeg" alt="Lover 4"></a>
+                     <figcaption>Cinema date</figcaption>
+                  </figure>
+                  <figure class="figure-rect">
+                     <a href="images/gallery/lover5.jpeg" target="_blank"><img src="images/gallery/lover5.jpeg" alt="Lover 5"></a>
+                     <figcaption>Photobooth date</figcaption>
+                  </figure>
+                  <figure class="figure-square">
+                     <a href="images/gallery/lover6.jpeg" target="_blank"><img src="images/gallery/lover6.jpeg" alt="Lover 6"></a>
+                     <figcaption>Cafe date</figcaption>
+                  </figure>
+               </div>
+               <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
+            </div>
+         </div>
+      </section>
+      <footer id="contacts">
+         <div class="social-links">
+            <a href="https://web.facebook.com/cycy.1123"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/libutoncyrilmae-a11y"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/cy.cyreal/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:123cyrilmae@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+         </div>
+         <p>&copy; Cyril Libuton</p>
+      </footer>
+   </body>
 </html>
